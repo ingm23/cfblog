@@ -1,42 +1,70 @@
-# MarkDown示例
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<script>
+;(function (doc, win) {
+  // 页面数据
+  var pageType = parseInt(doc.body.getAttribute('data-page-type')) || 0 // 页面方向 0竖1横
+  var designWidth = parseInt(doc.body.getAttribute('data-design-width')) || 750 // 设计宽度
+  var maxWidth = parseInt(doc.body.getAttribute('data-max-width')) || designWidth // 最大页面适配宽度
+
+  // 创建1rem宽度的不可见元素，用于计算原始缩放比例
+  var scaleDom = (function () {
+    var scaleDom = doc.createElement('div')
+    scaleDom.style.cssText = 'width:1rem;height:0;overflow:hidden;position:absolute;z-index:-2;visibility:hidden;'
+    doc.body.appendChild(scaleDom)
+    return scaleDom
+  })()
+
+  // 计算使用过fontSize缩放(如微信)下的原始缩放比例
+  function getOriginScale () {
+    var htmlFontSize = Number(String(doc.querySelector('html').style.fontSize || 16).replace('px', ''))
+    var instanceWidth = Number(String(win.getComputedStyle ? win.getComputedStyle(scaleDom).width : scaleDom.offsetWidth).replace('px', ''))
+    var scale = (htmlFontSize && instanceWidth) ? htmlFontSize / instanceWidth : 1
+    return scale
+  }
+
+  // 设置 html 用于处理 rem 的 font-size 和 页面二次缩放
+  function setScale () {
+    var scale = getOriginScale()
+    var clientWidth = doc.documentElement.clientWidth
+    var clientHeight = doc.documentElement.clientHeight
+    if (!clientWidth || !clientHeight) return
+    var calWidth = maxWidth > 0 ? Math.min(clientWidth, maxWidth) : clientWidth
+    win.uimakerScale = calWidth / designWidth * scale
+    doc.documentElement.style.fontSize = 100 * win.uimakerScale + 'px'
+  }
+
+  setScale()
+  setTimeout(() => { setScale() }, 300)
+
+  if (!doc.addEventListener || !win.addEventListener) return
+  doc.addEventListener('DOMContentLoaded', setScale, false)
+  win.addEventListener('orientationchange' in win ? 'orientationchange' : 'resize', setScale, false)
+  win.addEventListener('load', setScale, false)
+})(document, window)
+</script>
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<style type="text/css">
+  a{text-decoration:none}
+</style>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>m的小站</title>
+</head>
+<body data-page-type="{{jsonData.pageType}}" data-design-width="{{jsonData.width}}" data-max-width="{{jsonData.maxWidth}}" bgcolor="white" text="black">
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<center>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/bulma/0.8.0/css/bulma.min.css">
+# m的小站
+地区: 本地
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/highlight.js/9.18.1/styles/atom-one-light.min.css">
+</center>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+[1.测速](testspeed)
 
-<style> .footer { padding:.85rem 0; margin-top: 1rem; } .pagination { margin-top: 1rem; } .pagination-link.is-current { background-color: #333; border-color: #333; color: #fff; } .image { display: inline-block; max-width: 20%; } </style>
+[2.京豆车](jdc)
 
-<title>loading...</title>
-
-<div id="app"><router-view></router-view></div>
-
-<script src="https://cdn.staticfile.org/core-js/2.6.9/core.min.js"></script>
-
-<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
-
-<script src="https://cdn.staticfile.org/vue-router/3.1.3/vue-router.min.js"></script>
-
-<script src="https://cdn.staticfile.org/highlight.js/9.18.1/highlight.min.js"></script>
-
-<script src="https://cdn.staticfile.org/markdown-it/10.0.0/markdown-it.min.js"></script>
-
-<script src="https://cdn.staticfile.org/markdown-it-emoji/1.4.0/markdown-it-emoji-light.min.js"></script>
-
-<script src="/blog.js"></script>
-
-### Header 3
-
-> This is a blockquote.
-> 
-> \ > This is the second paragraph in the blockquote.
-> 
-> ## This is an H2 in a blockquote
-
+</body>
+</html>
