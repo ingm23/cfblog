@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html>
 <html lang="en">
+<script>
+;(function (doc, win) {
+  // 页面数据
+  var pageType = parseInt(doc.body.getAttribute('data-page-type')) || 0 // 页面方向 0竖1横
+  var designWidth = parseInt(doc.body.getAttribute('data-design-width')) || 750 // 设计宽度
+  var maxWidth = parseInt(doc.body.getAttribute('data-max-width')) || designWidth // 最大页面适配宽度
+
+  // 创建1rem宽度的不可见元素，用于计算原始缩放比例
+  var scaleDom = (function () {
+    var scaleDom = doc.createElement('div')
+    scaleDom.style.cssText = 'width:1rem;height:0;overflow:hidden;position:absolute;z-index:-2;visibility:hidden;'
+    doc.body.appendChild(scaleDom)
+    return scaleDom
+  })()
+
+  // 计算使用过fontSize缩放(如微信)下的原始缩放比例
+  function getOriginScale () {
+    var htmlFontSize = Number(String(doc.querySelector('html').style.fontSize || 16).replace('px', ''))
+    var instanceWidth = Number(String(win.getComputedStyle ? win.getComputedStyle(scaleDom).width : scaleDom.offsetWidth).replace('px', ''))
+    var scale = (htmlFontSize && instanceWidth) ? htmlFontSize / instanceWidth : 1
+    return scale
+  }
+
+  // 设置 html 用于处理 rem 的 font-size 和 页面二次缩放
+  function setScale () {
+    var scale = getOriginScale()
+    var clientWidth = doc.documentElement.clientWidth
+    var clientHeight = doc.documentElement.clientHeight
+    if (!clientWidth || !clientHeight) return
+    var calWidth = maxWidth > 0 ? Math.min(clientWidth, maxWidth) : clientWidth
+    win.uimakerScale = calWidth / designWidth * scale
+    doc.documentElement.style.fontSize = 100 * win.uimakerScale + 'px'
+  }
+
+  setScale()
+  setTimeout(() => { setScale() }, 300)
+
+  if (!doc.addEventListener || !win.addEventListener) return
+  doc.addEventListener('DOMContentLoaded', setScale, false)
+  win.addEventListener('orientationchange' in win ? 'orientationchange' : 'resize', setScale, false)
+  win.addEventListener('load', setScale, false)
+})(document, window)
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <style type="text/css">
