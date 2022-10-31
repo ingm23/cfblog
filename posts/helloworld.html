@@ -1,26 +1,1984 @@
-<!DOCTYPE html>
-<html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<style type="text/css">
-  a{text-decoration:none}
-</style>
 
-<title>m的小站</title>
-</head>
-<body data-page-type="{{jsonData.pageType}}" data-design-width="{{jsonData.width}}" data-max-width="{{jsonData.maxWidth}}" bgcolor="white" text="black">
 
-<center>
+<!DOCTYPE html><html lang="zh-cmn" ><head><meta charset="UTF-8">   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">  <meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta content="no-siteapp" http-equiv="Cache-Control"><link rel="dns-prefetch" href="//rescdn.qqmail.com"><link rel="dns-prefetch" href="//mmbiz.qpic.cn"><link rel="dns-prefetch" href="//p.qpic.cn"><script>var __START_DATE = +new Date</script>  <title>上车教程</title> <link rel="icon" type="image/png" sizes="16x16" href="//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/images/independent/favicon/favicon_16h$f0f9f362.png"> <link rel="icon" type="image/png" sizes="32x32" href="//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/images/independent/favicon/favicon_32h$acf5065d.png"> <link rel="icon" type="image/png" sizes="48x48" href="//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/images/independent/favicon/favicon_48h$91140c9f.png">  <link rel="stylesheet" type="text/css" href="//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/js/lib/darkmode/darkmode$ab92caad.css" /> <script>var RES_CDN='//wwcdn.weixin.qq.com'</script><script>//门神
+function AQ_SECAPI_ESCAPE(a,b){for(var c=new Array,d=0;d<a.length;d++)if("&"==a.charAt(d)){var e=[3,4,5,9],f=0;for(var g in e){var h=e[g];if(d+h<=a.length){var i=a.substr(d,h).toLowerCase();if(b[i]){c.push(b[i]),d=d+h-1,f=1;break};};}0==f&&c.push(a.charAt(d))}else c.push(a.charAt(d));return c.join("")}function AQ_SECAPI_CheckXss(){for(var a=new Object,b="'\"<>`script:daex/hml;bs64,",c=0;c<b.length;c++){for(var d=b.charAt(c),e=d.charCodeAt(),f=e,g=e.toString(16),h=0;h<7-e.toString().length;h++)f="0"+f;a["&#"+e+";"]=d,a["&#"+f]=d,a["&#x"+g]=d}a["&lt"]="<",a["&gt"]=">",a["&quot"]='"';var i=location.href,j=document.referrer;i=decodeURIComponent(AQ_SECAPI_ESCAPE(i,a)),j=decodeURIComponent(AQ_SECAPI_ESCAPE(j,a));var k=new RegExp("['\"<>`]|script:|data:text/html;base64,");if(k.test(i)||k.test(j)){var l="1.3",m="http://zyjc.sec.qq.com/dom",n=new Image;n.src=m+"?v="+l+"&u="+encodeURIComponent(i)+"&r="+encodeURIComponent(j),i=i.replace(/['\"<>`]|script:/gi,""),i=i.replace(/data:text\/html;base64,/gi,"data:text/plain;base64,"),location.href=i};}AQ_SECAPI_CheckXss()</script><script>var __HEAD_END_DATE = +new Date</script><style type="text/css">.img_loading {
+background-color: #eeedeb;
+border: 1px solid #eeedeb;
+background-size: 22px;
+background-position: center center;
+background-repeat: no-repeat;
+background-image: url(//rescdn.qqmail.com/node/ww/wwexpmng/style/images/independent/Loading_40h$ee6fe6fe.gif);
+}
+.__dark_theme .img_loading {
+background-color: #414242;
+opacity: .5;
+}</style><style> @charset "UTF-8";
+/**
+ * readNotice.scss PC与Mobile端读取公告页面
+ * @author Hughkli
+ * @date 2015-11-10
+ *
+ */
+/**
+ * var.scss 变量
+ * @author Kayo & Hugh
+ * @date 2015-08-08
+ *
+ * --- function ----
+ * #function QMUI 功能相关
+ *
+ * --- common ----
+ * #common 通用
+ *
+ * --- component ----
+ * #button 按钮组件
+ * #dialog 对话框组件
+ * #mask 遮罩层组件
+ * #dropdownMenu 下拉菜单组件
+ * #tab 选项卡组件
+ * #inputText、#textarea 文本输入组件
+ *
+ * --- project ---
+ * #project_common 项目通用
+ * #frame 外层框架
+ * #index 管理端首页
+ * #contact 组织架构
+ * #profile 我的企业
+ * #log 系统日志
+ * #login 登录与注册
+ * #others 其他
+ * #企业应用--开放API by jostinsu 2016.07.01
+ * #企业应用--通讯录同步助手 by jostinsu 2016.07.08
+ * #消息群发助手 by jostinsu 2016.09.18
+ *
+ */
+/**
+ * _mixin.scss
+ * @author Kayo
+ * @date 2014-10-31
+ *
+ */
+.qui_clear:after, .notice_filePanel:after, .notice_footer:after {
+  clear: both;
+  content: ".";
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
 
-# m的小站
-地区: 本地
+.qui_txtOverflow, .notice_watermark, .notice_audio_info .notice_audio_title {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: normal;
+}
 
-</center>
+.notice_header_title, .notice_header_subtitle_author, .notice_header_subtitle_date, .notice_cnt {
+  word-wrap: break-word;
+  word-break: break-word;
+}
 
-[1.测速](testspeed)
+.notice_Secrecy, .notice_cnt_copy, .notice_watermark {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-[2.京豆车](jdc)
+/**
+ * _tool.scss 常用工具方法
+ * @author Kayo
+ * @date 2015-08-23
+ *
+ */
+/**
+ * _reset.scss
+ * @author Kayo
+ * @date 2014-10-30
+ *
+ * #reset
+ * #html5
+ */
+/* #reset */
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, pre, form, fieldset, legend {
+  margin: 0;
+}
 
-</body>
-</html>
+ul, ol, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+th, td {
+  padding: 0;
+}
+
+table {
+  font-size: inherit;
+}
+
+fieldset, img {
+  border: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.5;
+  background: #e9eaeb;
+  color: #000;
+}
+
+h1, h2, h3, h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+body, input, textarea, select, button {
+  font-family: "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", sans-serif;
+  outline: none;
+  -webkit-text-size-adjust: none;
+}
+
+input, textarea, select, button {
+  font-size: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: #0C4C7F;
+  text-decoration: none;
+  -webkit-tap-highlight-color: #0C4C7F;
+}
+
+:focus {
+  outline: none;
+}
+
+/* #html5 HTML5 元素的支持 */
+article, aside, details,
+figcaption, figure,
+footer, header, hgroup,
+main, nav, section,
+summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+/**
+ * _function.scss
+ * @author Kayo
+ * @date 2014-11-17
+ */
+.qui_txtNormal {
+  font-weight: normal !important;
+}
+
+.qui_txtBold {
+  font-weight: bold !important;
+}
+
+.qui_txtLeft {
+  text-align: left !important;
+}
+
+.qui_txtRight {
+  text-align: right !important;
+}
+
+.qui_txtUnderline {
+  text-decoration: underline !important;
+}
+
+.qui_txtUnderlineNone {
+  text-decoration: none !important;
+}
+
+.qui_txtNowrap {
+  white-space: nowrap !important;
+}
+
+.qui_layoutLeft {
+  float: left !important;
+}
+
+.qui_layoutRight {
+  float: right !important;
+}
+
+.qui_displayNone {
+  display: none !important;
+}
+
+/* 后台管理用的icon */
+.ww_noticeImg{
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+.ww_noticeImg_AlertLarge{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: 0 0;
+  width: 110px;
+  height: 110px;
+}
+.ww_noticeImg_AlertSmall{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -90px -120px;
+  width: 55px;
+  height: 55px;
+}
+.ww_noticeImg_AttachmentTips{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -260px -133px;
+  width: 18px;
+  height: 17px;
+}
+.ww_noticeImg_CloseDialog{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -260px -160px;
+  width: 12px;
+  height: 12px;
+}
+.ww_noticeImg_Err{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -260px -33px;
+  width: 36px;
+  height: 36px;
+}
+.ww_noticeImg_FailLarge{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: 0 -120px;
+  width: 80px;
+  height: 80px;
+}
+.ww_noticeImg_LogoSmall{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -210px 0;
+  width: 89px;
+  height: 23px;
+}
+.ww_noticeImg_NoticeAttachmentExcel{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -210px -133px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentFlash{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -155px -120px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentImage{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: 0 -210px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentKeynote{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -50px -210px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentMail{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -100px -210px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentMusic{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -150px -210px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentNormal{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -210px -83px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentNumbers{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -250px -210px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentPages{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -210px -33px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentPdf{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -309px -50px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentPpt{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -309px -100px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentPsd{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -309px -150px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentTxt{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -309px -200px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentVideo{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: 0 -260px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentWord{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -50px -260px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_NoticeAttachmentZip{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -309px 0;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_SchoolContactClose{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -200px -210px;
+  width: 40px;
+  height: 40px;
+}
+.ww_noticeImg_SmallFilledThumbUp{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$51b62549.svg);
+  background-position: 0 0;
+  width: 16px;
+  height: 16px;
+}
+.ww_noticeImg_SmallFilledThumbUp2{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$51b62549.svg);
+  background-position: -16px 0;
+  width: 16px;
+  height: 16px;
+}
+.ww_noticeImg_SmallGhostThumbUp{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$51b62549.svg);
+  background-position: 0 -16px;
+  width: 16px;
+  height: 16px;
+}
+.ww_noticeImg_Succ{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -260px -83px;
+  width: 36px;
+  height: 36px;
+}
+.ww_noticeImg_ToolBtnAttachment{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -210px -183px;
+  width: 14px;
+  height: 14px;
+}
+.ww_noticeImg_infoLarge{
+  background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages$f8cae1f9.png);
+  background-position: -120px 0;
+  width: 80px;
+  height: 80px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 192dpi){
+  .ww_noticeImg_AlertLarge{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: 0 0;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_AlertSmall{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -90px -120px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_AttachmentTips{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -260px -133px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_CloseDialog{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -260px -160px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_Err{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -260px -33px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_FailLarge{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: 0 -120px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_LogoSmall{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -210px 0;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentExcel{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -210px -133px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentFlash{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -155px -120px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentImage{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: 0 -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentKeynote{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -50px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentMail{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -100px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentMusic{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -150px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentNormal{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -210px -83px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentNumbers{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -250px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPages{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -210px -33px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPdf{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -309px -50px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPpt{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -309px -100px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPsd{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -309px -150px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentTxt{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -309px -200px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentVideo{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: 0 -260px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentWord{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -50px -260px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentZip{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -309px 0;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_SchoolContactClose{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -200px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_Succ{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -260px -83px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_ToolBtnAttachment{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -210px -183px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_infoLarge{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_2x$319458c1.png);
+    background-position: -120px 0;
+    background-size: 349px 300px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (min-resolution: 3dppx){
+  .ww_noticeImg_AlertLarge{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: 0 0;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_AlertSmall{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -90px -120px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_AttachmentTips{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -260px -133px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_CloseDialog{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -260px -160px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_Err{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -260px -33px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_FailLarge{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: 0 -120px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_LogoSmall{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -210px 0;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentExcel{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -210px -133px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentFlash{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -155px -120px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentImage{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: 0 -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentKeynote{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -50px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentMail{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -100px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentMusic{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -150px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentNormal{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -210px -83px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentNumbers{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -250px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPages{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -210px -33px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPdf{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -309px -50px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPpt{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -309px -100px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentPsd{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -309px -150px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentTxt{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -309px -200px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentVideo{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: 0 -260px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentWord{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -50px -260px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_NoticeAttachmentZip{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -309px 0;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_SchoolContactClose{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -200px -210px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_Succ{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -260px -83px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_ToolBtnAttachment{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -210px -183px;
+    background-size: 349px 300px;
+  }
+  .ww_noticeImg_infoLarge{
+    background-image: url(//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/noticeImages_3x$92d50eaa.png);
+    background-position: -120px 0;
+    background-size: 349px 300px;
+  }
+}
+/* 主要样式代码 */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
+  background-color: var(--ww_white_bg);
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  color: #fff;
+  color: var(--ww_black);
+}
+
+.notice {
+  min-height: 100%;
+  width: 600px;
+  background-color: #FFFFFF;
+  background-color: var(--ww_white_bg);
+  margin: 0 auto;
+  padding: 30px 0 40px;
+  padding-bottom: calc(40px + env(safe-area-inset-bottom));
+}
+
+.notice img {
+  max-width: 100% !important;
+  vertical-align: top;
+}
+
+.notice ul, .notice ol {
+  padding-left: 25px;
+}
+
+.notice ul li {
+  list-style: disc outside;
+}
+
+.notice ol li {
+  list-style: decimal outside;
+}
+
+.notice .notice_tableWrap {
+  overflow: auto;
+  max-width: 100%;
+}
+
+.notice .isIE table {
+  width: 100% !important;
+}
+
+.notice pre {
+  white-space: pre-wrap;
+}
+
+/*
+ * 由于一开始对段落设置了段间距，后面发现有段间距影响到用户编辑文档的自由度，故去除。
+ * 为了兼容用户已经发出的文章，特此加了notice_HasSectionSpacing这个扩展来保留之前的文章的段间距
+ *
+*/
+.notice_HasSectionSpacing .notice_cnt p {
+  margin: 0 0 18px;
+}
+
+.notice_Secrecy .notice_header_subtitle_secrecy {
+  display: inline;
+}
+
+.notice_Secrecy .notice_cnt_copy {
+  display: block;
+}
+
+.notice_Secrecy .notice_cnt_copy a {
+  display: inline-block;
+}
+
+.notice_Secrecy .notice_cnt_copy img {
+  position: relative;
+  left: 3000px;
+}
+
+.notice_Secrecy .notice_watermarkWrap {
+  display: block;
+}
+
+/* 家校相关 start */
+.notice_showSchoolContact {
+  background: #EDEDED;
+  background: var(--ww_white_bg_press);
+}
+
+.notice_showSchoolContact .notice {
+  background: #EDEDED;
+  background: var(--ww_white_bg_press);
+}
+
+.notice_showSchoolContact .notice_main,
+.notice_showSchoolContact .notice_filePanel,
+.notice_showSchoolContact .notice_School_confirm {
+  display: none;
+}
+
+.notice_showSchoolContact .notice_School_contact {
+  display: block;
+}
+
+.notice_School {
+  padding-bottom: 104px;
+  padding-bottom: calc(104px + env(safe-area-inset-bottom));
+}
+
+.notice_School_contact {
+  display: none;
+  text-align: center;
+  padding: 105px 33px;
+  min-height: 100%;
+}
+
+.notice_School_contact_cnt {
+  padding: 30px 50px 40px;
+  background: #FFFFFF;
+  background: var(--ww_white_bg_1);
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 11px;
+}
+
+.notice_School_contact_title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.notice_School_contact_info {
+  display: flex;
+  text-align: left;
+  margin: 50px 0 40px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.notice_School_contact_avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.notice_School_contact_name {
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.notice_School_contact_school {
+  margin-left: 2px;
+  font-size: 14px;
+  color: #FF8214;
+  color: var(--ww_orange_external);
+}
+
+.notice_School_contact_qrcode {
+  width: 160px;
+  height: 160px;
+}
+
+.notice_School_contact_tips {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #777F8C;
+  color: var(--ww_blue_text_2);
+}
+
+.notice_School_contact_close {
+  margin-top: 40px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.notice_School_confirm {
+  position: fixed;
+  padding: 10px 20px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #F5F5F5;
+  background: var(--ww_white_bg_press_light);
+  background: rgba(248, 248, 248, 0.9);
+}
+
+.notice_School_confirm:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-top: #B2B2B2;
+  border-top: 1px solid var(--ww_gray_70);
+  color: #B2B2B2;
+  color: var(--ww_gray_70);
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.34);
+      -ms-transform: scaleY(0.34);
+          transform: scaleY(0.34);
+}
+
+.notice_School_confirm_Clicked .notice_School_confirm_tips {
+  display: inline-block;
+}
+
+.notice_School_confirm_Clicked .notice_School_confirm_btn {
+  display: none;
+}
+
+.notice_School_confirm_btn {
+  display: block;
+  padding: 9px 15px;
+  line-height: 26px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #3975C6;
+  background-color: var(--ww_blue_dark_15);
+  color: #FFFFFF;
+  color: var(--ww_white);
+  text-align: center;
+  text-decoration: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.notice_School_confirm_btn:hover {
+  color: #FFFFFF;
+  color: var(--ww_white);
+  text-decoration: none;
+}
+
+.notice_School_confirm_btn:active {
+  background-color: #3975C6;
+  background-color: var(--ww_blue_dark_15);
+  color: #FFFFFF;
+  color: var(--ww_white);
+  text-decoration: none;
+}
+
+.notice_School_confirm_tips {
+  display: none;
+  line-height: 44px;
+  font-size: 17px;
+  color: #999999;
+  color: var(--ww_gray_60);
+}
+
+/* 家校相关 end */
+.notice_main {
+  overflow-y: visible;
+  position: relative;
+}
+
+.hide_overflow_watermark {
+  overflow: hidden;
+}
+
+.notice_header {
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.notice_header a {
+  text-decoration: none;
+}
+
+.notice_header_title {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.notice_header_title_attachmentTips {
+  vertical-align: top;
+  white-space: nowrap;
+  padding-left: 3px;
+}
+
+.notice_header_title_attachmentTips .ww_noticeImg_ToolBtnAttachment {
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+.notice_header_title_attachmentTips_count {
+  color: #808080;
+  color: var(--ww_gray_50);
+  font-size: 14px;
+  margin-left: 2px;
+  line-height: 39px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.notice_header_subtitle {
+  display: flex;
+  margin-top: 10px;
+  color: #808080;
+  color: var(--ww_gray_50);
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.notice_header_subtitle_secrecy {
+  display: none;
+  border-radius: 14px;
+  padding: 1px 8px;
+  color: #999999;
+  color: var(--ww_gray_60);
+  margin-right: 12px;
+  border: 1px solid #B4BEC8;
+}
+
+.notice_header_subtitle_author {
+  position: relative;
+  z-index: 1;
+}
+
+.notice_header_subtitle_author a:hover {
+  text-decoration: none;
+}
+
+.notice_header_subtitle_teacher {
+  margin-left: 8px;
+}
+
+.notice_header_subtitle_date {
+  margin-right: 8px;
+}
+
+/* stylelint-disable */
+.notice_cnt {
+  padding: 6px 0;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  color: #4D4D4D;
+  color: var(--ww_gray_30);
+  line-height: 1.8;
+}
+
+.notice_cnt img {
+  max-width: 100%;
+  height: auto;
+}
+
+.notice_cnt p {
+  margin: 0;
+}
+
+.notice_cnt a {
+  -webkit-tap-highlight-color: inherit;
+}
+
+.notice_cnt ul li {
+  list-style: inherit;
+}
+
+.notice_cnt ol li {
+  list-style: inherit;
+}
+
+/* stylelint-enable */
+.notice_cnt_inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.notice_cnt_copy {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.notice_filePanel {
+  border: #CCCCCC;
+  border: 1px solid var(--ww_gray_80);
+  margin-top: 25px;
+  position: relative;
+  z-index: 1;
+  padding: 15px 5px 5px 5px;
+  border-radius: 2px;
+}
+
+.notice_filePanel_title {
+  position: absolute;
+  top: -10px;
+  left: 9px;
+  background-color: #FFFFFF;
+  background-color: var(--ww_white_bg_2);
+  color: #808080;
+  color: var(--ww_gray_50);
+  padding: 0 6px;
+}
+
+.notice_filePanel_itemWrap {
+  display: block;
+  float: left;
+  padding-right: 0;
+  padding-left: 10px;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.notice_filePanel_itemWrap:hover {
+  text-decoration: none;
+}
+
+.notice_filePanel_item {
+  cursor: pointer;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.notice_filePanel_item .ww_noticeImg {
+  float: left;
+  margin-right: 8px;
+}
+
+.notice_filePanel_item_intro {
+  padding-top: 3px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.notice_filePanel_item_intro_title {
+  display: block;
+  overflow: hidden;
+  color: #000000;
+  color: var(--ww_black);
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.notice_filePanel_item_intro_size {
+  color: #808080;
+  color: var(--ww_gray_50);
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.notice_watermarkWrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  color: #EBEBEB;
+  color: var(--ww_gray_92);
+  font-size: 17px;
+  z-index: 0;
+  overflow-x: hidden;
+  pointer-events: none;
+}
+
+.notice_watermark {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: .5;
+  float: left;
+  text-shadow: #FFFFFF;
+  text-shadow: 0 0 0 var(--ww_white_bg_2);
+  text-align: center;
+  /* 桌面端一排显示4个水印 */
+  width: 24%;
+  height: 150px;
+  line-height: 150px;
+}
+
+/* stylelint-disable */
+/* IE9下矩阵滤镜和opacity混用时会出错，因此只在IE8下使用矩阵滤镜 */
+@media \0screen {
+  .notice_watermark {
+    filter: alpha(opacity=50) progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand');
+  }
+}
+
+/* stylelint-enable */
+/* 公告被删除时 */
+.notice_Deleted {
+  color: #B2B2B2;
+  color: var(--ww_gray_70);
+  font-size: 16px;
+  text-align: center;
+}
+
+.notice_Deleted_alert {
+  position: absolute;
+  text-align: center;
+  top: 17.4%;
+  width: 100%;
+}
+
+.notice_Deleted_alert_alertSmall {
+  display: none;
+}
+
+.notice_Deleted_alert_text {
+  color: #000000;
+  color: var(--ww_black);
+  margin: 25px auto 0;
+  width: 80%;
+}
+
+.notice_footer_sender {
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #999999;
+  color: var(--ww_gray_60);
+  padding-right: 15px;
+}
+
+.notice_footer_sender_name {
+  margin-left: 0;
+}
+
+.notice_footer_item {
+  margin-top: 20px;
+  font-size: 17px;
+  padding-right: 15px;
+  color: #999999;
+  color: var(--ww_gray_60);
+  float: left;
+  overflow: hidden;
+}
+
+.notice_footer_item_ThumbUp {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.notice_footer_item_ThumbUp .ww_noticeImg_SmallGhostThumbUp, .notice_footer_item_ThumbUp .ww_noticeImg_SmallFilledThumbUp {
+  vertical-align: -1px;
+}
+
+.notice_footer_item_number {
+  padding-left: 6px;
+}
+
+/* 这里主要是Mac客户端下的显示，因为Mac客户端读公告页面固定宽度为521px，这里要防止出现横向滚动条 */
+@media screen and (max-width: 750px) {
+  body {
+    background-color: #FFFFFF;
+    background-color: var(--ww_white_bg);
+  }
+  .notice {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 15px 25px 30px;
+  }
+}
+
+/* 手机端样式代码 */
+@media screen and (max-width: 415px) {
+  body {
+    height: auto;
+    background-color: #FFFFFF;
+    background-color: var(--ww_white_bg);
+  }
+  .notice {
+    width: auto;
+    height: auto;
+    padding: 0 0 20px 0;
+  }
+  .notice_header {
+    padding: 20px 15px 0 15px;
+  }
+  .notice_footer {
+    padding: 0 15px;
+  }
+  .notice_header_title {
+    font-size: 27px;
+    line-height: 35px;
+  }
+  .notice_header_subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+    line-height: 24px;
+  }
+  .notice_header_subtitle_secrecy {
+    font-size: 14px;
+    vertical-align: 1px;
+    padding-bottom: 2px;
+  }
+  /* 1设备像素border */
+}
+
+@media screen and (max-width: 415px) and (-webkit-min-device-pixel-ratio: 2) {
+  .notice_header_subtitle {
+    position: relative;
+    border: 0 none;
+  }
+  .notice_header_subtitle:before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 415px) and (-webkit-min-device-pixel-ratio: 3) {
+  .notice_header_subtitle:before {
+    width: 300%;
+    height: 300%;
+    -webkit-transform: scale(0.3333);
+        -ms-transform: scale(0.3333);
+            transform: scale(0.3333);
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .notice_cnt {
+    font-size: 17px;
+    padding: 6px 15px;
+    line-height: 1.8;
+  }
+  .notice_filePanel {
+    border: 0 none;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border-top: #CCCCCC;
+    border-top: 1px solid var(--ww_gray_80);
+    border-bottom: #CCCCCC;
+    border-bottom: 1px solid var(--ww_gray_80);
+  }
+  /* 1设备像素border */
+}
+
+@media screen and (max-width: 415px) and (-webkit-min-device-pixel-ratio: 2) {
+  .notice_filePanel {
+    position: relative;
+    border: 0 none;
+  }
+  .notice_filePanel:before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: #CCCCCC;
+    border-top: 1px solid var(--ww_gray_80);
+    border-bottom: #CCCCCC;
+    border-bottom: 1px solid var(--ww_gray_80);
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 415px) and (-webkit-min-device-pixel-ratio: 3) {
+  .notice_filePanel:before {
+    width: 300%;
+    height: 300%;
+    -webkit-transform: scale(0.3333);
+        -ms-transform: scale(0.3333);
+            transform: scale(0.3333);
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .notice_filePanel_title {
+    display: none;
+  }
+  .notice_filePanel_itemWrap {
+    display: block;
+    float: none;
+    margin-right: 0;
+    border-radius: 0;
+    width: auto;
+    padding-left: 15px;
+    margin-bottom: 0;
+    overflow: hidden;
+    zoom: 1;
+  }
+  .notice_filePanel_itemWrap:active {
+    background-color: #EBEBEB;
+    background-color: var(--ww_gray_92);
+  }
+  .notice_filePanel_itemWrap:first-child .notice_filePanel_item {
+    border-top: none;
+  }
+  .notice_filePanel_item {
+    padding: 11px 0;
+    border-top: #CCCCCC;
+    border-top: 1px solid var(--ww_gray_80);
+  }
+  /* 1设备像素border */
+}
+
+@media screen and (max-width: 415px) and (-webkit-min-device-pixel-ratio: 2) {
+  .notice_filePanel_item {
+    position: relative;
+    border: 0 none;
+  }
+  .notice_filePanel_item:before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: #CCCCCC;
+    border-top: 1px solid var(--ww_gray_80);
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 415px) and (-webkit-min-device-pixel-ratio: 3) {
+  .notice_filePanel_item:before {
+    width: 300%;
+    height: 300%;
+    -webkit-transform: scale(0.3333);
+        -ms-transform: scale(0.3333);
+            transform: scale(0.3333);
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .notice_filePanel_item_intro_title {
+    font-size: 14px;
+    padding-right: 30px;
+  }
+  .notice_filePanel_item_accesory {
+    position: absolute;
+    right: 17px;
+    top: 22px;
+    width: 9px;
+    height: 9px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .notice_filePanel_item_accesory:before,
+  .notice_filePanel_item_accesory:after {
+    content: "";
+    display: block;
+    background-color: #CCCCCC;
+    background-color: var(--ww_gray_80);
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+  .notice_filePanel_item_accesory:before {
+    width: 100%;
+    height: 1px;
+  }
+  .notice_filePanel_item_accesory:after {
+    width: 1px;
+    height: 100%;
+  }
+  /* 手机端一排显示3个水印 */
+  .notice_watermark {
+    width: 90%;
+    -webkit-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    color: #CCCCCC;
+    color: var(--ww_gray_80);
+    font-size: 14px;
+    opacity: 0.4;
+    margin-right: -20%;
+    margin-left: -20%;
+  }
+  .notice_watermark:nth-child(even) {
+    margin-top: 81px;
+  }
+  .notice_Deleted_alert_alertSmall {
+    display: inline-block;
+  }
+  .notice_Deleted_alert_text {
+    margin: 25px auto 0;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.notice_audio_wrap {
+  padding: 10px 15px 10px 15px;
+  border: #CCCCCC;
+  border: 1px solid var(--ww_gray_80);
+  border-radius: 5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.notice_audio_switch {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.notice_audio_switch .notice_audio_switch_icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url("//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/independent/message/audio_play$3c92b8ce.png");
+  background-size: 50px 50px;
+  margin-top: 7px;
+}
+
+.notice_audio_info .notice_audio_title {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+
+.notice_audio_info .notice_audio_desc {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #A9AFB8;
+  color: var(--ww_gray_blue_72);
+}
+
+.notice_audio_info .notice_audio_desc .notice_audio_length_total {
+  float: right;
+}
+
+.notice_audio_info .notice_audio_progress_wrap {
+  height: 2px;
+  margin-right: 7px;
+  position: relative;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.notice_audio_info .notice_audio_progress {
+  height: 100%;
+  background-color: #EBEBEB;
+  background-color: var(--ww_gray_92);
+  position: relative;
+  width: 100%;
+  padding-left: 7px;
+  -webkit-box-sizing: initial !important;
+          box-sizing: initial !important;
+}
+
+.notice_audio_info .notice_audio_progress_inner {
+  background-color: #267EF0;
+  background-color: var(--ww_blue_btn);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.notice_audio_info .notice_audio_progress_handle {
+  z-index: 2;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(0, 130, 239, 0.15);
+  top: 50%;
+  margin-top: -7px;
+  margin-left: -3.5px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.notice_audio_info .notice_audio_progress_handle:before {
+  content: " ";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #267EF0;
+  background-color: var(--ww_blue_btn);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -4px;
+  margin-left: -4px;
+}
+
+.notice_audio_info .notice_audio_progress_loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.notice_audio_info .notice_audio_progress_loading_inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: slidein 6s linear infinite normal;
+          animation: slidein 6s linear infinite normal;
+  width: 200%;
+  max-width: none !important;
+  background-image: #CCCCCC;
+  background-image: -webkit-repeating-linear-gradient(105deg, var(--ww_gray_80), #d9d9d9 2px, #ebebeb 2px, #ebebeb 4px);
+  background-image: -o-repeating-linear-gradient(105deg, var(--ww_gray_80), #d9d9d9 2px, #ebebeb 2px, #ebebeb 4px);
+  background-image: repeating-linear-gradient(-15deg, var(--ww_gray_80), #d9d9d9 2px, #ebebeb 2px, #ebebeb 4px);
+}
+
+.notice_audio_info .notice_audio_progress_buffer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #CCCCCC;
+  background-color: var(--ww_gray_80);
+}
+
+.notice_audio_info {
+  margin-left: 66px;
+}
+
+.notice_audio_wrap.notice_audio_status_play .notice_audio_progress_handle {
+  display: block !important;
+}
+
+.notice_audio_wrap.notice_audio_status_play .notice_audio_switch_icon {
+  background-image: url("//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/independent/message/audio_stop$929dd6ef.png");
+  background-size: 50px 50px;
+}
+
+.notice_audio_status_stop .notice_audio_progress_handle {
+  display: block !important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .notice_audio_wrap {
+    border-radius: 2px;
+    border: #CCCCCC;
+    border: 0.5px solid var(--ww_gray_80);
+  }
+  .notice_audio_switch .notice_audio_switch_icon {
+    background-image: url("//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/independent/message/audio_play_2x$2860e056.png");
+    background-size: 50px 50px;
+  }
+  .notice_audio_wrap.notice_audio_status_play .notice_audio_switch_icon {
+    background-image: url("//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/style/css/wwopen_mobile/../../images/independent/message/audio_stop_2x$680798bd.png");
+    background-size: 50px 50px;
+  }
+}
+
+.ww_noticeImg_InfoLarge {
+  background-position: 0 0;
+  background-size: 80px 80px;
+  width: 80px;
+  height: 80px;
+  background-image: url("https://rescdn.qqmail.com/node/wwmng/wwmng/style/images/independent/icons/InfoLarge$26b2d7d8.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 192dpi) {
+  .ww_noticeImg_InfoLarge {
+    background-image: url("https:////rescdn.qqmail.com/node/wwmng/wwmng/style/images/independent/icons/InfoLarge_2x$d977300a.png");
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (min-resolution: 3dppx) {
+  .ww_noticeImg_InfoLarge {
+    background-image: url("https:////rescdn.qqmail.com/node/wwmng/wwmng/style/images/independent/icons/InfoLarge_3x$58c1b36f.png");
+  }
+}
+
+/* iphonex */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  /* stylelint-disable */
+  body {
+    height: 100vh;
+  }
+  /* stylelint-enable */
+}
+
+.notice_top_delete_tips {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 105, 99, 0.1)), to(rgba(255, 105, 99, 0.1)));
+  background: -webkit-linear-gradient(bottom, rgba(255, 105, 99, 0.1), rgba(255, 105, 99, 0.1));
+  background: -o-linear-gradient(bottom, rgba(255, 105, 99, 0.1), rgba(255, 105, 99, 0.1));
+  background: linear-gradient(0deg, rgba(255, 105, 99, 0.1), rgba(255, 105, 99, 0.1));
+}
+
+.notice_top_delete_tips_icon {
+  background-image: url("https://wwcdn.weixin.qq.com/node/wework/images/icon_delete.56f6358ca1.svg");
+  height: 14px;
+  width: 14px;
+  background-size: cover;
+}
+
+.notice_top_delete_tips_text_wrap {
+  margin-left: 10px;
+}
+
+.notice_top_delete_tips_text {
+  font-size: 13px;
+  height: 18px;
+  color: #000;
+  color: var(--ww_black);
+}
+
+.notice_top_delete_tips_mobile {
+  padding: 9px 12px;
+  margin: 16px 16px 0;
+}
+
+.notice_top_delete_tips_mobile .notice_top_delete_tips_text_wrap {
+  margin-left: 12px;
+}
+
+.notice_top_delete_tips_mobile .notice_top_delete_tips_text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  height: 21px;
+}
+
+.notice_top_delete_tips_mobile_desc {
+  font-size: 12px;
+  line-height: 17px;
+  height: 17px;
+  color: #757A80;
+  color: var(--ww_gray_blue_50);
+}
+
+.notice_delete_type_save_material_btn {
+  display: inline-block;
+  height: 24px;
+  padding: 2px 12px;
+  line-height: 24px;
+  text-align: center;
+  color: #222;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#F8F8F8));
+  background-image: -webkit-linear-gradient(top, #fff 0%, #F8F8F8 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, #F8F8F8 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #F8F8F8 100%);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  vertical-align: middle;
+  border: 1px solid #AAA;
+  min-width: 48px;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.notice_delete_type_save_material_btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #ebebeb 100%);
+  background-image: -o-linear-gradient(top, #f2f2f2 0%, #ebebeb 100%);
+  background-image: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 100%);
+}
+
+.notice_delete_type_save_material_btn:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#dedede));
+  background-image: -webkit-linear-gradient(top, #e5e5e5 0%, #dedede 100%);
+  background-image: -o-linear-gradient(top, #e5e5e5 0%, #dedede 100%);
+  background-image: linear-gradient(to bottom, #e5e5e5 0%, #dedede 100%);
+}
+
+.save_to_material_split_line {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.07);
+  margin-top: 14px;
+  margin-bottom: 22px;
+}
+
+.save_to_material_tips {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 10px;
+  line-height: 18px;
+  height: 20px;
+  text-align: center;
+  color: #FFF;
+  padding: 0 8px;
+  background-color: #78CC57;
+  z-index: 1000;
+  display: none;
+}
+
+.save_to_material_tips .go_material {
+  color: #FFF;
+}
+
+.ww_noticeImg_Alert {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-image: url("https://wwcdn.weixin.qq.com/node/wework/images/alert-red-icon.12dc8cbd10.svg");
+}
+
+.notice_delete_padding_top {
+  padding-top: 20px;
+}
+
+.notice_Deleted_alert_text_weight_500 {
+  font-weight: 500;
+}
+
+.mobile_delete_msg_btm_btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: .05em;
+  color: #267EF0;
+  color: var(--ww_blue_btn);
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: calc(17px + env(safe-area-inset-bottom));
+  background: -webkit-gradient(linear, left bottom, left top, from(#F5F6F7), color-stop(#F5F6F7, w));
+  background: -webkit-linear-gradient(bottom, #F5F6F7, w #F5F6F7);
+  background: -o-linear-gradient(bottom, #F5F6F7, w #F5F6F7);
+  background: linear-gradient(0deg, #F5F6F7, w #F5F6F7);
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--ww_gray_blue_97_bg_tabbar)), to(var(--ww_gray_blue_97_bg_tabbar)));
+  background: -webkit-linear-gradient(bottom, var(--ww_gray_blue_97_bg_tabbar), var(--ww_gray_blue_97_bg_tabbar));
+  background: -o-linear-gradient(bottom, var(--ww_gray_blue_97_bg_tabbar), var(--ww_gray_blue_97_bg_tabbar));
+  background: linear-gradient(0deg, var(--ww_gray_blue_97_bg_tabbar), var(--ww_gray_blue_97_bg_tabbar));
+  z-index: 1000;
+}
+
+.mobile_delete_empty_block {
+  height: 77px;
+}
+
+.delete_sent_msg_actionsheet .weui_actionsheet_with_radius, .delete_sent_msg_actionsheet .weui_actionsheet_title_with_radius {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.delete_sent_msg_actionsheet .weui_actionsheet_title_with_radius {
+  font-size: 13px;
+  height: 50px;
+}
+
+.delete_sent_msg_actionsheet .weui_actionsheet_cell_warn {
+  color: #FF3C32;
+  height: 40px;
+  line-height: 40px;
+}
+
+.delete_sent_msg_actionsheet .weui_actionsheet_action_add_safe_btm .cancel_delete_sent_msg_text {
+  font-size: 17px;
+  line-height: 24px;
+  padding: 0;
+  padding-top: 18px;
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
+}
+
+.mobile_delete_msg_toast .weui_toast_large {
+  width: 8.6em;
+}
+
+/* stylelint-disable */
+.__dark_theme .notice_top_delete_tips {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 115, 110, 0.1)), to(rgba(255, 115, 110, 0.1)));
+  background: -webkit-linear-gradient(bottom, rgba(255, 115, 110, 0.1), rgba(255, 115, 110, 0.1));
+  background: -o-linear-gradient(bottom, rgba(255, 115, 110, 0.1), rgba(255, 115, 110, 0.1));
+  background: linear-gradient(0deg, rgba(255, 115, 110, 0.1), rgba(255, 115, 110, 0.1));
+}
+
+/* stylelint-enable */
+ </style>   </head><body class=" "><div id="wwopenmsg.mpnews_layout_$" rendered="true"><div id="wwopenmsg.mpnews_layout$layout$"><div id="wwopenmsg.mpNewsMsgPage_$" rendered="true">  <base target="_blank">   <div class="notice    " id="notice" oncut="return false" ><div class="notice_main" id="notice_main"><div class="notice_top_delete_tips "  style="display: none" ><div class="notice_top_delete_tips_icon"></div><div class="notice_top_delete_tips_text_wrap"><div class="notice_top_delete_tips_text">内容已删除</div>  </div></div><div class="notice_header"><div class="notice_header_title"> 京东CK获取教程和上车链接  </div><div class="notice_header_subtitle">  <span class="notice_header_subtitle_date">2021-12-14</span><span class="notice_header_subtitle_author">QQ群724102472</span>  </div></div><div class="notice_cnt" id="notice_cnt" style="visibility: hidden"><div class="notice_cnt_inner"><div class="notice_cnt_original" id="annnoucement_content_string"><p><br></p><h1 style=";line-height:normal"><a></a><span style="font-size:28px">一、下载Alook浏览器</span></h1><p><a></a><span style="font-size: 18px;"><strong>在安卓手机应用商店或者点击☛</strong></span><span style="font-size: 18px; color: rgb(79, 129, 189);"><strong><a href="https://www.alookweb.com/" target="_self" style="text-decoration: underline; font-size: 18px; color: rgb(149, 179, 215);">Alook浏览器</a></strong></span><span style="font-size: 18px;"><strong>下载</strong></span></p><p><strong><span style="font-size:28px"><br></span></strong></p><p><a></a><strong><span style="font-size:28px">二、Alook浏览器搜索打开<a href="http://m.jd.com">m.jd.com</a></span></strong></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height:116%"><br></span></strong></p><p style="line-height:116%"><a></a><strong><span style="font-size:28px;line-height:116%">三、手机号码登录</span></strong></p><p><a></a><span style="font-size: 18px;">登陆成功之后<strong><span style="color: rgb(229, 62, 53);">长按右下角</span></strong></span></p><p><br></p><p><img data-fmt="png" data-size="553,983" data-src="//wework.qpic.cn/wwpic/362570_ZbM-v26YRRK8J0q_1633408728/0" src="//wework.qpic.cn/wwpic/362570_ZbM-v26YRRK8J0q_1633408728/0"></p><p><br></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%"><br></span></strong></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%">四、点击开发者工具</span></strong></p><p><img data-fmt="png" data-size="553,983" data-src="//wework.qpic.cn/wwpic/365981_wQWmnxSvR1yK_1c_1633408756/0" src="//wework.qpic.cn/wwpic/365981_wQWmnxSvR1yK_1c_1633408756/0"></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%"><br></span></strong></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%">再点击cookie红框</span></strong></p><p><img data-fmt="png" data-size="553,983" data-src="//wework.qpic.cn/wwpic/691508_QejAFqNhT4y45fi_1633408782/0" src="//wework.qpic.cn/wwpic/691508_QejAFqNhT4y45fi_1633408782/0"></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%"><br></span></strong></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%">五、点击拷贝</span></strong></p><p><img data-fmt="png" data-size="553,983" data-src="//wework.qpic.cn/wwpic/274921_AqqGfkYuSFCrX0b_1633408803/0" src="//wework.qpic.cn/wwpic/274921_AqqGfkYuSFCrX0b_1633408803/0"></p><h1 style=";line-height:116%"><span style="font-size:28px;line-height:116%"><br></span></h1><h1 style=";line-height:116%"><span style="font-size:28px;line-height:116%">点击<span style="color:#E53E35">拷贝</span>就复制成功了，然后私聊发给QQ机器人</span></h1><p><img data-fmt="png" data-size="553,991" data-src="//wework.qpic.cn/wwpic/197259_pI_6UKQkRuqgioX_1633408824/0" src="//wework.qpic.cn/wwpic/197259_pI_6UKQkRuqgioX_1633408824/0"></p><p><img data-fmt="png" data-size="553,983" data-src="//wework.qpic.cn/wwpic/386166_2uCeIkufQnCWwBT_1633408835/0" src="//wework.qpic.cn/wwpic/386166_2uCeIkufQnCWwBT_1633408835/0"></p><p style="line-height:116%"><strong><span style="font-size:28px;line-height: 116%"><br></span></strong></p><p><strong><span style="font-size:28px;line-height: 116%">必须加机器人好友才能发送成功（如果机器人长时间没有回复可以尝试刷新一下<span style="font-size: 28px; line-height: 116%; color: rgb(255, 0, 0);">A</span><span style="font-size: 28px; line-height: 116%; color: rgb(255, 0, 0);"></span></span></strong><strong><span style="font-size: 24px; background-color: rgb(255, 255, 255); color: rgb(255, 0, 0);">look浏览器京东网页</span></strong><strong><span style="font-size:28px;line-height: 116%">再重新拷贝新的CK发给机器人）</span></strong></p><p><a></a>新人<strong><span style="color:#E53E35">须知:</span></strong></p><p><a></a>1.需成功加机器人<strong><span style="color:#E53E35">好友</span></strong>才能成功发送CK</p><p><a></a>2.京东账号需<strong><span style="color:#E53E35">实名</span></strong>，不然很快账号就会<strong>黑号</strong></p><p><a></a>3.京东账号需<strong>关闭免密支付，开启虚拟资产验证</strong></p><p><a></a>4.发"<strong><span style="color:#E53E35">查询</span></strong>"给机器人即可查看账号情况</p><p><a></a>5.不建议大家挂相同身份信息的<strong><span style="color:#E53E35">小号</span></strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><h1 style=";line-height:normal"><span style="font-size:28px">苹果手机获取cookie方法</span></h1><p><a></a>&nbsp;</p><p><img data-fmt="png" data-size="553,174" data-src="//wework.qpic.cn/wwpic/57663_-kAaSoJITT2Sycl_1633408873/0" src="//wework.qpic.cn/wwpic/57663_-kAaSoJITT2Sycl_1633408873/0"></p><p><br></p><p>打开<a href="https://pgyy.vip">https://pgyy.vip</a>&nbsp; 密码123 密码不对去公众号获取新的密码</p><p><a></a>找到Alook浏览器，点击安装，复制账号密码登录苹果store，自己下载Alook浏览器</p><p><br></p><p><img data-fmt="png" data-size="500,800" data-src="//wework.qpic.cn/wwpic/466283_J1dbzHu6QIqZlZb_1633408889/0" src="//wework.qpic.cn/wwpic/466283_J1dbzHu6QIqZlZb_1633408889/0"></p><p><img data-fmt="png" data-size="351,799" data-src="//wework.qpic.cn/wwpic/832449_cE76hoRzQm66hrJ_1633408904/0" src="//wework.qpic.cn/wwpic/832449_cE76hoRzQm66hrJ_1633408904/0"></p><p><img data-fmt="png" data-size="553,551" data-src="//wework.qpic.cn/wwpic/292188_Fo-A0S4NTpOzXuE_1633408915/0" src="//wework.qpic.cn/wwpic/292188_Fo-A0S4NTpOzXuE_1633408915/0"></p><p><strong><span style="font-size:20px;font-family:'微软雅黑',sans-serif">安装Alook浏览器之后获取CK的方法和安卓一样</span></strong></p></div><div class="notice_cnt_copy" id="annnoucement_content_string_copy"></div></div></div></div>      <div class="notice_footer">   </div>    </div>   <script>
+function getI18NLang() {
+var cookieLang = document.cookie.match(/(?:^|;) *wwrtx\.i18n_lan=([^;]+)/);
+return cookieLang && cookieLang[1]
+}
+var i18n_lang = getI18NLang();
+if (i18n_lang === 'en') {
+if (document.getElementById('notice_i18n_read_origin')) {
+var read_origin = document.getElementById('notice_i18n_read_origin').innerHTML;
+document.getElementById('notice_i18n_read_origin').innerHTML = read_origin.replace('阅读原文', 'Read more');
+}
+if (document.getElementById('notice_i18n_read')) {
+var read = document.getElementById('notice_i18n_read').innerHTML;
+document.getElementById('notice_i18n_read').innerHTML = read.replace('阅读', 'Read');
+}
+}</script><script type="text/template" id="js_wwaudio_tpl"><div id="js_voice_main_<%audio_id%>" class="notice_audio_wrap ">
+            <div id="js_voice_btn_<%audio_id%>"  class="notice_audio_switch"><i class="notice_audio_switch_icon " role="button"></i></div>
+            <div id="js_voice_detail_<%audio_id%>" class="notice_audio_info">
+                <div id="js_voice_title_<%audio_id%>" class="notice_audio_title" >&nbsp;</div>
+                <div id="js_voice_seekRange_<%audio_id%>" class="notice_audio_progress_wrap">
+                <div class="notice_audio_progress">
+                        <span id="js_voice_progress_<%audio_id%>" style="width:0%" class="notice_audio_progress_inner"></span>
+                        <span id="js_voice_buffer_<%audio_id%>" class="notice_audio_progress_buffer" style="width:0%;"></span>
+                        <span id="js_voice_loading_<%audio_id%>" class="notice_audio_progress_loading" style="display:none;">
+                            <span class="notice_audio_progress_loading_inner"></span>
+                        </span>
+                    </div>
+                    <div id="js_voice_playdot_<%audio_id%>" class="notice_audio_progress_handle" style="display:none;left:0%;"></div>
+                </div>
+                <div class="notice_audio_desc" >
+                    <span id="js_voice_playtime_<%audio_id%>" class="notice_audio_length_current" >00:00</span>
+                    <span id="js_voice_duration_<%audio_id%>" class="notice_audio_length_total">00:00</span>
+                </div>
+            </div>
+        </div></script><script>var ua = navigator.userAgent.toLowerCase();
+var isIE = false;
+document.addEventListener('touchstart', function() {}, true);
+window.settings = {"cur_reader":"m7357","issecret":false,"isLike":false,"likeNum":0,"mfid":"","idx":"","appid":"","is_school_notice":false,"school_notice_mfid":"","title":"京东CK获取教程和上车链接","shareLogo":"https://wework.qpic.cn/wwpic/964570_wzbeUJWlT2mFtUv_1633408647/1280","abstract":"一、下载Alook浏览器在安卓手机应用商店或者百度搜索Alook浏览器下载二、Alook浏览器搜索打开m.j"};
+if (ua.match(/msie ([\d.]+)/) || ua.match(/trident ([\d.]+)/)) {
+document.body.className = document.body.className + " isIE"
+isIE = true;
+}
+window.__LQ_REPORT_URL__ = '/wwopenmsg/report'</script><script> !function(){"undefined"==typeof getComputedStyle&&(document.body.currentStyle?window.getComputedStyle=function(e){return e.currentStyle}:window.getComputedStyle={});var e=window.mpnewsHelper={LQReportQueue:[],readyWXjsApi:function(e){"object"==typeof WeixinJSBridge&&"function"==typeof WeixinJSBridge.invoke?e():(document.attachEvent&&document.attachEvent("WeixinJSBridgeReady",e),document.addEventListener&&document.addEventListener("WeixinJSBridgeReady",e))},renderSecret:function(e){isIE&&(document.getElementById("annnoucement_content_string_copy").innerHTML=e);var t=document.body,n=document.documentElement,i=Math.max(t.scrollHeight,t.offsetHeight,n.clientHeight,n.scrollHeight,n.offsetHeight),o=Math.max(t.scrollWidth,t.offsetWidth,n.clientWidth,n.scrollWidth,n.offsetWidth),r=t.scrollHeight>t.offsetHeight,a=document.createElement("div");a.className="notice_watermarkWrap",document.querySelector(".notice_watermarkWrap")?(a=document.querySelector(".notice_watermarkWrap")).innerHTML="":document.getElementById("notice_main").appendChild(a);var d=document.createElement("div");d.className="notice_watermark",d.innerHTML=window.settings.cur_reader,d.style.visibility="hidden",a.appendChild(d);var c=d.clientWidth,l=d.clientHeight,s=(r?Math.ceil(o/c):Math.round(o/c))*(Math.round(i/l)+1);a.removeChild(d);for(var m=document.createDocumentFragment(),u=0;u<s;u++){var g=document.createElement("div");g.className="notice_watermark",g.innerHTML=window.settings.cur_reader,m.appendChild(g)}a.innerHTML="",a.appendChild(m),r&&(document.querySelector(".notice_main").classList.add("hide_overflow_watermark"),document.querySelector(".notice_watermarkWrap").classList.add("hide_overflow_watermark"))},getViewportSize:function(){return{width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}},wrapTable:function(e){var t=e.querySelectorAll("table");if(t&&t.length)for(var n=0;n<t.length;n++){var i=document.createElement("div");i.className="notice_tableWrap",t[n].width>this.getViewportSize().width&&(console.log(t[n].style.cssText),t[n].style.cssText+="width:100%!important"),t[n].parentNode.insertBefore(i,t[n]),i.appendChild(t[n])}},addURLParam:function(e,t){return e.indexOf("?")>-1?e+="&"+t:e+="?"+t,e},insertAfter:function(e,t){var n=t.parentNode;n.lastChild==t?n.appendChild(e):n.insertBefore(e,t.nextSibling)},getQueryFromURL:function(e){for(var t=(e=e||"http://qq.com/s?a=b#rd").split("?")[1].split("#")[0].split("&"),n={},i=0;i<t.length;i++){var o=t[i].split("=");n[o[0]]=o[1]}return n},resizeIframe:function(e){for(var t=document.querySelectorAll("iframe"),n=0;n<t.length;n++){var i=t[n],o=i.src,r=this.getQueryFromURL(o),a=e.offsetWidth,d=a/16*9;if(i.setAttribute("width",a),i.setAttribute("height",d),i.setAttribute("scrolling","no"),i.style.borderWidth="initial",i.style.borderStyle="none",i.style.overflow="initial",i.src&&!/^https?:\/\/[^\/#\?]+?\.qq\.com\//i.test(i.src))return void setTimeout(function(){i.remove()},0);i.src=o.replace("width="+r.width,"width="+a).replace("height="+r.height,"height="+d).replace("http://","https://").replace("preview.html","player.html").replace("//v.qq.com/iframe/player.html","//v.qq.com/txp/iframe/player.html")+"&disableplugin=IframeBottomOpenClientBar,IframeOutsiteDownloader",window.settings.issecret&&(i.src+="&full=false")}},isMyCDN:function(e){return!(e.indexOf("//p.qpic.cn/")<0&&e.indexOf("//mmbiz.qpic.cn/")<0&&e.indexOf("//rescdn.qqmail.com/")<0&&e.indexOf("work.weixin.qq.com/")<0&&e.indexOf("//wework.qpic.cn/")<0)},isWebpSupport:function(e){if(window.localStorage&&window.localStorage.getItem("webp")&&(window.webp="1"==window.localStorage.getItem("webp")),void 0===window.webp){var t=new Image;t.onload=function(){var n=t.width>0&&t.height>0;window.webp=n,window.localStorage&&window.localStorage.setItem("webp",n?"1":"0"),e(n)},t.onerror=function(){window.webp=!1,window.localStorage&&window.localStorage.setItem("webp","0"),e(!1)},t.src="data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"}else e(window.webp)},getParentWidth:function(e){for(var t=0,n=e.parentNode,i=0;n!=document;){var o=getComputedStyle(n);if(!n||!o)break;if((t=n.clientWidth-parseFloat(o.paddingLeft)-parseFloat(o.paddingRight)-i)>0)break;i+=parseFloat(o.paddingLeft)+parseFloat(o.paddingRight)+parseFloat(o.marginLeft)+parseFloat(o.marginRight)+parseFloat(o.borderLeftWidth)+parseFloat(o.borderRightWidth),n=n.parentNode}return t},fixImage:function(){if(document.querySelectorAll){var e=document.querySelectorAll("img[data-src]");for(m=0;m<e.length;m++){var t=e[m],n=(t.getAttribute("data-size")||"").split(","),i=+n[0],o=+n[1],r=t.getAttribute("src"),a=document.getElementById("annnoucement_content_string").clientWidth;if(!r&&i&&o){var d=i||a,c=o,l=this.getParentWidth(t)||a;t.style.width&&"auto"!=t.style.width&&(t.setAttribute("_width",t.style.width),d=t.style.width.indexOf("%")?parseFloat(t.style.width)/100*l:parseFloat(t.style.width)),c*=(d=d<l?d:l)/i,t.style.cssText+="width:"+d+"px !important; height:"+c+"px !important;",e[m].className+=" img_loading"}}}else for(var s=document.getElementsByTagName("img"),m=0;m<s.length;m++)!s[m].getAttribute("src")&&s[m].getAttribute("data-src")&&(s[m].src=s[m].getAttribute("data-src"))},initLike:function(){var e=window.settings.isLike,t=window.settings.likeNum,n=document.getElementById("js_like_icon"),i=document.getElementById("js_like_btn"),o=document.getElementById("js_like_num");i.onclick=function(){e?(t--,n.className="ww_noticeImg ww_noticeImg_SmallGhostThumbUp"):(t++,n.className="ww_noticeImg ww_noticeImg_SmallFilledThumbUp"),o.innerHTML=t||"",e=!e,(new Image).src=e?"/wwopenmsg/mpnews/like?mfid="+encodeURIComponent(window.settings.mfid)+"&idx="+window.settings.idx+"&appid="+window.settings.appid:"/wwopenmsg/mpnews/unlike?mfid="+encodeURIComponent(window.settings.mfid)+"&idx="+window.settings.idx+"&appid="+window.settings.appid}},throttle:function(e,t){var n,i,o,r,a=0;function d(){r=0,a=+new Date,o=e.apply(n,i),n=null,i=null}return function(){n=this,i=arguments;var e=new Date-a;return r||(e>=t?d():r=setTimeout(d,t-e)),o}},lazyload:function(){var e=this;if(document.querySelectorAll){for(var t=document.querySelectorAll("img[data-src]"),n=[],i=0;i<t.length;i++)t[i].getAttribute("src")||(t[i].setAttribute("src","data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="),t[i].setAttribute("data-lazyload","0"),n.push(t[i]));0!=n.length&&(document.addEventListener("scroll",e.throttle(function(){a(n)},300)),setTimeout(function(){a(n)},0))}function o(e,t){return window.innerHeight+(document.body.scrollTop||document.documentElement.scrollTop)<=r(e).top-t.threshold}function r(e){var t=e.getBoundingClientRect(),n=document.documentElement;return{top:t.top+(window.pageYOffset||n.scrollTop)-(n.clientTop||0),left:t.left+(window.pageXOffset||n.scrollLeft)-(n.clientLeft||0)}}function a(t){for(var n=0;n<t.length;n++)!function(t){var n,i;if(!(t.offsetWidth<=0&&t.offsetHeight<=0)&&(null!=t.getAttribute("data-lazyload")&&"1"!=t.getAttribute("data-lazyload")))if(n=t,i={threshold:200},(document.body.scrollTop||document.documentElement.scrollTop)>=r(n).top+i.threshold+n.offsetHeight);else if(!o(t,{threshold:200})){var a=t.getAttribute("data-src"),d=t.getAttribute("data-fmt");a=a.replace("&tp=webp","").replace("?tp=webp","?").replace("&wx_lazy=1",""),d&&"gif"!=d&&"svg"!=d&&e.isMyCDN(a)&&("png"!=d&&(a=a.replace(/\/0$/,"/640").replace(/\/0\?/,"/640?")),window.webp&&(a=e.addURLParam(a,"tp=webp"))),t.setAttribute("data-lazyload","1"),t.onerror=function(){var n=a.replace("&tp=webp","").replace("?tp=webp","?");n=e.addURLParam(n,"_t="+(new Date-0)),setTimeout(function(){t.src=n},100),this.onerror=function(){n=n+"&__t="+(new Date-0),setTimeout(function(){t.src=n},1e3),this.onerror=null}},t.onload=function(){t.style.width=t.getAttribute("_width")||"auto",t.style.height="auto",t.className=t.className.replace("img_loading","")},t.src=a}}(t[n])}},initWeixinBridge:function(){var e=document.createElement("div");e.innerHTML=document.getElementById("annnoucement_content_string").innerHTML,WeixinJSBridge.invoke("hideOptionMenu"),window.settings.isAnnouncement||window.settings.encrypt||WeixinJSBridge.invoke("showOptionMenu");var t={title:window.settings.title,desc:window.settings.abstract||e.innerText.substring(0,54),imgWidth:"850",imgHeight:"472",link:(location.href||"").replace(/&st=[^&]+/gi,"").replace(/&vid=[^&]+/gi,"").replace(/&pass_ticket=[^&]+/gi,"").replace(/&code=[^&]+/gi,""),imgurl:window.settings.shareLogo||"https://rescdn.qqmail.com/node/ww/wwmng/style/images/independent/announcement_logo.png"};t.desc&&(t.desc=t.desc.replace(/&#92;n/gi,"\n"),t.desc=t.desc.replace(/\n/gi," ")),window.shareData=t,WeixinJSBridge.on("menu:share:appmessage",function(){return WeixinJSBridge.invoke("sendAppMessage",{img_url:t.imgurl,img_width:t.imgWidth,img_height:t.imgHeight,link:t.link,desc:t.desc,title:t.title},function(e){}),!1}),WeixinJSBridge.on("menu:share:timeline",function(){return WeixinJSBridge.invoke("shareTimeline",{img_url:t.imgurl,img_width:t.imgWidth,img_height:t.imgHeight,link:t.link,desc:t.desc,title:t.title},function(e){}),!1})},initPreviewImage:function(){for(var t=document.querySelectorAll("#annnoucement_content_string img"),n=[],i=[],o=0,r=t.length;o<r;o++){var a=t[o].getAttribute("data-fmt"),d=t[o].getAttribute("data-src")||t[o].getAttribute("src");if(d){if(a&&("gif"==a||"svg"==a))continue;e.isMyCDN(d)&&(d=d.replace("?tp=webp","?").replace("&tp=webp","").replace(/\/640$/,"/0").replace(/\/640\?/,"/0?")),0==d.indexOf("http")?n.push(d):n.push("http:"+d),i.push(t[o])}}var c=!1;document.body.addEventListener("touchmove",function(){c=!0});for(o=0,r=i.length;o<r;o++)!function(){var e=o;i[e].addEventListener("touchend",function(t){var i=t.target.parentNode;do{if("a"==i.tagName.toLowerCase())return;i=i.parentNode}while(i!=document.body);c?c=!1:WeixinJSBridge.invoke("imagePreview",{current:n[e],urls:n},function(e){})})}()},LQReportReady:function(e){if(window.LQReport)return e(window.LQReport);this.LQReportQueue.push(e)}};document.addEventListener("DOMContentLoaded",function(){try{e.fixImage(),e.wrapTable(document.getElementById("annnoucement_content_string")),e.resizeIframe(document.getElementById("annnoucement_content_string"))}catch(e){console&&console.error&&console.error(e)}e.isWebpSupport(function(){e.lazyload()}),9!=window.settings.msgtype&&22!=window.settings.msgtype||!window.settings.can_like||e.initLike(),window.settings.issecret&&e.renderSecret(document.getElementById("annnoucement_content_string").innerHTML),e.readyWXjsApi(function(){e.initWeixinBridge(),window.settings.issecret||e.initPreviewImage()})})}(); </script><script async="async" src="//wwcdn.weixin.qq.com/node/wwopenmsg/wwopenmsg/js/mpnews/mpnews.async$e905cbcc.js"></script><script> !function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define("Darkmode",[],t):"object"==typeof exports?exports.Darkmode=t():e.Darkmode=t()}(window,function(){return function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s="./src/darkmode.js")}({"./node_modules/color-convert/conversions.js":function(e,t,r){var n=r("./node_modules/color-convert/node_modules/color-name/index.js"),o={};for(var a in n)n.hasOwnProperty(a)&&(o[n[a]]=a);var i=e.exports={rgb:{channels:3,labels:"rgb"},hsl:{channels:3,labels:"hsl"},hsv:{channels:3,labels:"hsv"},hwb:{channels:3,labels:"hwb"},cmyk:{channels:4,labels:"cmyk"},xyz:{channels:3,labels:"xyz"},lab:{channels:3,labels:"lab"},lch:{channels:3,labels:"lch"},hex:{channels:1,labels:["hex"]},keyword:{channels:1,labels:["keyword"]},ansi16:{channels:1,labels:["ansi16"]},ansi256:{channels:1,labels:["ansi256"]},hcg:{channels:3,labels:["h","c","g"]},apple:{channels:3,labels:["r16","g16","b16"]},gray:{channels:1,labels:["gray"]}};for(var s in i)if(i.hasOwnProperty(s)){if(!("channels"in i[s]))throw new Error("missing channels property: "+s);if(!("labels"in i[s]))throw new Error("missing channel labels property: "+s);if(i[s].labels.length!==i[s].channels)throw new Error("channel and label counts mismatch: "+s);var l=i[s].channels,u=i[s].labels;delete i[s].channels,delete i[s].labels,Object.defineProperty(i[s],"channels",{value:l}),Object.defineProperty(i[s],"labels",{value:u})}i.rgb.hsl=function(e){var t,r,n=e[0]/255,o=e[1]/255,a=e[2]/255,i=Math.min(n,o,a),s=Math.max(n,o,a),l=s-i;return s===i?t=0:n===s?t=(o-a)/l:o===s?t=2+(a-n)/l:a===s&&(t=4+(n-o)/l),(t=Math.min(60*t,360))<0&&(t+=360),r=(i+s)/2,[t,100*(s===i?0:r<=.5?l/(s+i):l/(2-s-i)),100*r]},i.rgb.hsv=function(e){var t,r,n,o,a,i=e[0]/255,s=e[1]/255,l=e[2]/255,u=Math.max(i,s,l),c=u-Math.min(i,s,l),h=function(e){return(u-e)/6/c+.5};return 0===c?o=a=0:(a=c/u,t=h(i),r=h(s),n=h(l),i===u?o=n-r:s===u?o=1/3+t-n:l===u&&(o=2/3+r-t),o<0?o+=1:o>1&&(o-=1)),[360*o,100*a,100*u]},i.rgb.hwb=function(e){var t=e[0],r=e[1],n=e[2];return[i.rgb.hsl(e)[0],100*(1/255*Math.min(t,Math.min(r,n))),100*(n=1-1/255*Math.max(t,Math.max(r,n)))]},i.rgb.cmyk=function(e){var t,r=e[0]/255,n=e[1]/255,o=e[2]/255;return[100*((1-r-(t=Math.min(1-r,1-n,1-o)))/(1-t)||0),100*((1-n-t)/(1-t)||0),100*((1-o-t)/(1-t)||0),100*t]},i.rgb.keyword=function(e){var t=o[e];if(t)return t;var r,a,i,s=1/0;for(var l in n)if(n.hasOwnProperty(l)){var u=n[l],c=(a=e,i=u,Math.pow(a[0]-i[0],2)+Math.pow(a[1]-i[1],2)+Math.pow(a[2]-i[2],2));c<s&&(s=c,r=l)}return r},i.keyword.rgb=function(e){return n[e]},i.rgb.xyz=function(e){var t=e[0]/255,r=e[1]/255,n=e[2]/255;return[100*(.4124*(t=t>.04045?Math.pow((t+.055)/1.055,2.4):t/12.92)+.3576*(r=r>.04045?Math.pow((r+.055)/1.055,2.4):r/12.92)+.1805*(n=n>.04045?Math.pow((n+.055)/1.055,2.4):n/12.92)),100*(.2126*t+.7152*r+.0722*n),100*(.0193*t+.1192*r+.9505*n)]},i.rgb.lab=function(e){var t=i.rgb.xyz(e),r=t[0],n=t[1],o=t[2];return n/=100,o/=108.883,r=(r/=95.047)>.008856?Math.pow(r,1/3):7.787*r+16/116,[116*(n=n>.008856?Math.pow(n,1/3):7.787*n+16/116)-16,500*(r-n),200*(n-(o=o>.008856?Math.pow(o,1/3):7.787*o+16/116))]},i.hsl.rgb=function(e){var t,r,n,o,a,i=e[0]/360,s=e[1]/100,l=e[2]/100;if(0===s)return[a=255*l,a,a];t=2*l-(r=l<.5?l*(1+s):l+s-l*s),o=[0,0,0];for(var u=0;u<3;u++)(n=i+1/3*-(u-1))<0&&n++,n>1&&n--,a=6*n<1?t+6*(r-t)*n:2*n<1?r:3*n<2?t+(r-t)*(2/3-n)*6:t,o[u]=255*a;return o},i.hsl.hsv=function(e){var t=e[0],r=e[1]/100,n=e[2]/100,o=r,a=Math.max(n,.01);return r*=(n*=2)<=1?n:2-n,o*=a<=1?a:2-a,[t,100*(0===n?2*o/(a+o):2*r/(n+r)),100*((n+r)/2)]},i.hsv.rgb=function(e){var t=e[0]/60,r=e[1]/100,n=e[2]/100,o=Math.floor(t)%6,a=t-Math.floor(t),i=255*n*(1-r),s=255*n*(1-r*a),l=255*n*(1-r*(1-a));switch(n*=255,o){case 0:return[n,l,i];case 1:return[s,n,i];case 2:return[i,n,l];case 3:return[i,s,n];case 4:return[l,i,n];case 5:return[n,i,s]}},i.hsv.hsl=function(e){var t,r,n,o=e[0],a=e[1]/100,i=e[2]/100,s=Math.max(i,.01);return n=(2-a)*i,r=a*s,[o,100*(r=(r/=(t=(2-a)*s)<=1?t:2-t)||0),100*(n/=2)]},i.hwb.rgb=function(e){var t,r,n,o,a,i,s,l=e[0]/360,u=e[1]/100,c=e[2]/100,h=u+c;switch(h>1&&(u/=h,c/=h),n=6*l-(t=Math.floor(6*l)),0!=(1&t)&&(n=1-n),o=u+n*((r=1-c)-u),t){default:case 6:case 0:a=r,i=o,s=u;break;case 1:a=o,i=r,s=u;break;case 2:a=u,i=r,s=o;break;case 3:a=u,i=o,s=r;break;case 4:a=o,i=u,s=r;break;case 5:a=r,i=u,s=o}return[255*a,255*i,255*s]},i.cmyk.rgb=function(e){var t=e[0]/100,r=e[1]/100,n=e[2]/100,o=e[3]/100;return[255*(1-Math.min(1,t*(1-o)+o)),255*(1-Math.min(1,r*(1-o)+o)),255*(1-Math.min(1,n*(1-o)+o))]},i.xyz.rgb=function(e){var t,r,n,o=e[0]/100,a=e[1]/100,i=e[2]/100;return r=-.9689*o+1.8758*a+.0415*i,n=.0557*o+-.204*a+1.057*i,t=(t=3.2406*o+-1.5372*a+-.4986*i)>.0031308?1.055*Math.pow(t,1/2.4)-.055:12.92*t,r=r>.0031308?1.055*Math.pow(r,1/2.4)-.055:12.92*r,n=n>.0031308?1.055*Math.pow(n,1/2.4)-.055:12.92*n,[255*(t=Math.min(Math.max(0,t),1)),255*(r=Math.min(Math.max(0,r),1)),255*(n=Math.min(Math.max(0,n),1))]},i.xyz.lab=function(e){var t=e[0],r=e[1],n=e[2];return r/=100,n/=108.883,t=(t/=95.047)>.008856?Math.pow(t,1/3):7.787*t+16/116,[116*(r=r>.008856?Math.pow(r,1/3):7.787*r+16/116)-16,500*(t-r),200*(r-(n=n>.008856?Math.pow(n,1/3):7.787*n+16/116))]},i.lab.xyz=function(e){var t,r,n,o=e[0];t=e[1]/500+(r=(o+16)/116),n=r-e[2]/200;var a=Math.pow(r,3),i=Math.pow(t,3),s=Math.pow(n,3);return r=a>.008856?a:(r-16/116)/7.787,t=i>.008856?i:(t-16/116)/7.787,n=s>.008856?s:(n-16/116)/7.787,[t*=95.047,r*=100,n*=108.883]},i.lab.lch=function(e){var t,r=e[0],n=e[1],o=e[2];return(t=360*Math.atan2(o,n)/2/Math.PI)<0&&(t+=360),[r,Math.sqrt(n*n+o*o),t]},i.lch.lab=function(e){var t,r=e[0],n=e[1];return t=e[2]/360*2*Math.PI,[r,n*Math.cos(t),n*Math.sin(t)]},i.rgb.ansi16=function(e){var t=e[0],r=e[1],n=e[2],o=1 in arguments?arguments[1]:i.rgb.hsv(e)[2];if(0===(o=Math.round(o/50)))return 30;var a=30+(Math.round(n/255)<<2|Math.round(r/255)<<1|Math.round(t/255));return 2===o&&(a+=60),a},i.hsv.ansi16=function(e){return i.rgb.ansi16(i.hsv.rgb(e),e[2])},i.rgb.ansi256=function(e){var t=e[0],r=e[1],n=e[2];return t===r&&r===n?t<8?16:t>248?231:Math.round((t-8)/247*24)+232:16+36*Math.round(t/255*5)+6*Math.round(r/255*5)+Math.round(n/255*5)},i.ansi16.rgb=function(e){var t=e%10;if(0===t||7===t)return e>50&&(t+=3.5),[t=t/10.5*255,t,t];var r=.5*(1+~~(e>50));return[(1&t)*r*255,(t>>1&1)*r*255,(t>>2&1)*r*255]},i.ansi256.rgb=function(e){if(e>=232){var t=10*(e-232)+8;return[t,t,t]}var r;return e-=16,[Math.floor(e/36)/5*255,Math.floor((r=e%36)/6)/5*255,r%6/5*255]},i.rgb.hex=function(e){var t=(((255&Math.round(e[0]))<<16)+((255&Math.round(e[1]))<<8)+(255&Math.round(e[2]))).toString(16).toUpperCase();return"000000".substring(t.length)+t},i.hex.rgb=function(e){var t=e.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);if(!t)return[0,0,0];var r=t[0];3===t[0].length&&(r=r.split("").map(function(e){return e+e}).join(""));var n=parseInt(r,16);return[n>>16&255,n>>8&255,255&n]},i.rgb.hcg=function(e){var t,r=e[0]/255,n=e[1]/255,o=e[2]/255,a=Math.max(Math.max(r,n),o),i=Math.min(Math.min(r,n),o),s=a-i;return t=s<=0?0:a===r?(n-o)/s%6:a===n?2+(o-r)/s:4+(r-n)/s+4,t/=6,[360*(t%=1),100*s,100*(s<1?i/(1-s):0)]},i.hsl.hcg=function(e){var t=e[1]/100,r=e[2]/100,n=1,o=0;return(n=r<.5?2*t*r:2*t*(1-r))<1&&(o=(r-.5*n)/(1-n)),[e[0],100*n,100*o]},i.hsv.hcg=function(e){var t=e[1]/100,r=e[2]/100,n=t*r,o=0;return n<1&&(o=(r-n)/(1-n)),[e[0],100*n,100*o]},i.hcg.rgb=function(e){var t=e[0]/360,r=e[1]/100,n=e[2]/100;if(0===r)return[255*n,255*n,255*n];var o,a=[0,0,0],i=t%1*6,s=i%1,l=1-s;switch(Math.floor(i)){case 0:a[0]=1,a[1]=s,a[2]=0;break;case 1:a[0]=l,a[1]=1,a[2]=0;break;case 2:a[0]=0,a[1]=1,a[2]=s;break;case 3:a[0]=0,a[1]=l,a[2]=1;break;case 4:a[0]=s,a[1]=0,a[2]=1;break;default:a[0]=1,a[1]=0,a[2]=l}return o=(1-r)*n,[255*(r*a[0]+o),255*(r*a[1]+o),255*(r*a[2]+o)]},i.hcg.hsv=function(e){var t=e[1]/100,r=t+e[2]/100*(1-t),n=0;return r>0&&(n=t/r),[e[0],100*n,100*r]},i.hcg.hsl=function(e){var t=e[1]/100,r=e[2]/100*(1-t)+.5*t,n=0;return r>0&&r<.5?n=t/(2*r):r>=.5&&r<1&&(n=t/(2*(1-r))),[e[0],100*n,100*r]},i.hcg.hwb=function(e){var t=e[1]/100,r=t+e[2]/100*(1-t);return[e[0],100*(r-t),100*(1-r)]},i.hwb.hcg=function(e){var t=e[1]/100,r=1-e[2]/100,n=r-t,o=0;return n<1&&(o=(r-n)/(1-n)),[e[0],100*n,100*o]},i.apple.rgb=function(e){return[e[0]/65535*255,e[1]/65535*255,e[2]/65535*255]},i.rgb.apple=function(e){return[e[0]/255*65535,e[1]/255*65535,e[2]/255*65535]},i.gray.rgb=function(e){return[e[0]/100*255,e[0]/100*255,e[0]/100*255]},i.gray.hsl=i.gray.hsv=function(e){return[0,0,e[0]]},i.gray.hwb=function(e){return[0,100,e[0]]},i.gray.cmyk=function(e){return[0,0,0,e[0]]},i.gray.lab=function(e){return[e[0],0,0]},i.gray.hex=function(e){var t=255&Math.round(e[0]/100*255),r=((t<<16)+(t<<8)+t).toString(16).toUpperCase();return"000000".substring(r.length)+r},i.rgb.gray=function(e){return[(e[0]+e[1]+e[2])/3/255*100]}},"./node_modules/color-convert/index.js":function(e,t,r){var n=r("./node_modules/color-convert/conversions.js"),o=r("./node_modules/color-convert/route.js"),a={};Object.keys(n).forEach(function(e){a[e]={},Object.defineProperty(a[e],"channels",{value:n[e].channels}),Object.defineProperty(a[e],"labels",{value:n[e].labels});var t=o(e);Object.keys(t).forEach(function(r){var n=t[r];a[e][r]=function(e){var t=function(t){if(null==t)return t;arguments.length>1&&(t=Array.prototype.slice.call(arguments));var r=e(t);if("object"==typeof r)for(var n=r.length,o=0;o<n;o++)r[o]=Math.round(r[o]);return r};return"conversion"in e&&(t.conversion=e.conversion),t}(n),a[e][r].raw=function(e){var t=function(t){return null==t?t:(arguments.length>1&&(t=Array.prototype.slice.call(arguments)),e(t))};return"conversion"in e&&(t.conversion=e.conversion),t}(n)})}),e.exports=a},"./node_modules/color-convert/node_modules/color-name/index.js":function(e,t,r){"use strict";e.exports={aliceblue:[240,248,255],antiquewhite:[250,235,215],aqua:[0,255,255],aquamarine:[127,255,212],azure:[240,255,255],beige:[245,245,220],bisque:[255,228,196],black:[0,0,0],blanchedalmond:[255,235,205],blue:[0,0,255],blueviolet:[138,43,226],brown:[165,42,42],burlywood:[222,184,135],cadetblue:[95,158,160],chartreuse:[127,255,0],chocolate:[210,105,30],coral:[255,127,80],cornflowerblue:[100,149,237],cornsilk:[255,248,220],crimson:[220,20,60],cyan:[0,255,255],darkblue:[0,0,139],darkcyan:[0,139,139],darkgoldenrod:[184,134,11],darkgray:[169,169,169],darkgreen:[0,100,0],darkgrey:[169,169,169],darkkhaki:[189,183,107],darkmagenta:[139,0,139],darkolivegreen:[85,107,47],darkorange:[255,140,0],darkorchid:[153,50,204],darkred:[139,0,0],darksalmon:[233,150,122],darkseagreen:[143,188,143],darkslateblue:[72,61,139],darkslategray:[47,79,79],darkslategrey:[47,79,79],darkturquoise:[0,206,209],darkviolet:[148,0,211],deeppink:[255,20,147],deepskyblue:[0,191,255],dimgray:[105,105,105],dimgrey:[105,105,105],dodgerblue:[30,144,255],firebrick:[178,34,34],floralwhite:[255,250,240],forestgreen:[34,139,34],fuchsia:[255,0,255],gainsboro:[220,220,220],ghostwhite:[248,248,255],gold:[255,215,0],goldenrod:[218,165,32],gray:[128,128,128],green:[0,128,0],greenyellow:[173,255,47],grey:[128,128,128],honeydew:[240,255,240],hotpink:[255,105,180],indianred:[205,92,92],indigo:[75,0,130],ivory:[255,255,240],khaki:[240,230,140],lavender:[230,230,250],lavenderblush:[255,240,245],lawngreen:[124,252,0],lemonchiffon:[255,250,205],lightblue:[173,216,230],lightcoral:[240,128,128],lightcyan:[224,255,255],lightgoldenrodyellow:[250,250,210],lightgray:[211,211,211],lightgreen:[144,238,144],lightgrey:[211,211,211],lightpink:[255,182,193],lightsalmon:[255,160,122],lightseagreen:[32,178,170],lightskyblue:[135,206,250],lightslategray:[119,136,153],lightslategrey:[119,136,153],lightsteelblue:[176,196,222],lightyellow:[255,255,224],lime:[0,255,0],limegreen:[50,205,50],linen:[250,240,230],magenta:[255,0,255],maroon:[128,0,0],mediumaquamarine:[102,205,170],mediumblue:[0,0,205],mediumorchid:[186,85,211],mediumpurple:[147,112,219],mediumseagreen:[60,179,113],mediumslateblue:[123,104,238],mediumspringgreen:[0,250,154],mediumturquoise:[72,209,204],mediumvioletred:[199,21,133],midnightblue:[25,25,112],mintcream:[245,255,250],mistyrose:[255,228,225],moccasin:[255,228,181],navajowhite:[255,222,173],navy:[0,0,128],oldlace:[253,245,230],olive:[128,128,0],olivedrab:[107,142,35],orange:[255,165,0],orangered:[255,69,0],orchid:[218,112,214],palegoldenrod:[238,232,170],palegreen:[152,251,152],paleturquoise:[175,238,238],palevioletred:[219,112,147],papayawhip:[255,239,213],peachpuff:[255,218,185],peru:[205,133,63],pink:[255,192,203],plum:[221,160,221],powderblue:[176,224,230],purple:[128,0,128],rebeccapurple:[102,51,153],red:[255,0,0],rosybrown:[188,143,143],royalblue:[65,105,225],saddlebrown:[139,69,19],salmon:[250,128,114],sandybrown:[244,164,96],seagreen:[46,139,87],seashell:[255,245,238],sienna:[160,82,45],silver:[192,192,192],skyblue:[135,206,235],slateblue:[106,90,205],slategray:[112,128,144],slategrey:[112,128,144],snow:[255,250,250],springgreen:[0,255,127],steelblue:[70,130,180],tan:[210,180,140],teal:[0,128,128],thistle:[216,191,216],tomato:[255,99,71],turquoise:[64,224,208],violet:[238,130,238],wheat:[245,222,179],white:[255,255,255],whitesmoke:[245,245,245],yellow:[255,255,0],yellowgreen:[154,205,50]}},"./node_modules/color-convert/route.js":function(e,t,r){var n=r("./node_modules/color-convert/conversions.js");function o(e){var t=function(){for(var e={},t=Object.keys(n),r=t.length,o=0;o<r;o++)e[t[o]]={distance:-1,parent:null};return e}(),r=[e];for(t[e].distance=0;r.length;)for(var o=r.pop(),a=Object.keys(n[o]),i=a.length,s=0;s<i;s++){var l=a[s],u=t[l];-1===u.distance&&(u.distance=t[o].distance+1,u.parent=o,r.unshift(l))}return t}function a(e,t){return function(r){return t(e(r))}}function i(e,t){for(var r=[t[e].parent,e],o=n[t[e].parent][e],i=t[e].parent;t[i].parent;)r.unshift(t[i].parent),o=a(n[t[i].parent][i],o),i=t[i].parent;return o.conversion=r,o}e.exports=function(e){for(var t=o(e),r={},n=Object.keys(t),a=n.length,s=0;s<a;s++){var l=n[s];null!==t[l].parent&&(r[l]=i(l,t))}return r}},"./node_modules/color-name/index.js":function(e,t,r){"use strict";e.exports={aliceblue:[240,248,255],antiquewhite:[250,235,215],aqua:[0,255,255],aquamarine:[127,255,212],azure:[240,255,255],beige:[245,245,220],bisque:[255,228,196],black:[0,0,0],blanchedalmond:[255,235,205],blue:[0,0,255],blueviolet:[138,43,226],brown:[165,42,42],burlywood:[222,184,135],cadetblue:[95,158,160],chartreuse:[127,255,0],chocolate:[210,105,30],coral:[255,127,80],cornflowerblue:[100,149,237],cornsilk:[255,248,220],crimson:[220,20,60],cyan:[0,255,255],darkblue:[0,0,139],darkcyan:[0,139,139],darkgoldenrod:[184,134,11],darkgray:[169,169,169],darkgreen:[0,100,0],darkgrey:[169,169,169],darkkhaki:[189,183,107],darkmagenta:[139,0,139],darkolivegreen:[85,107,47],darkorange:[255,140,0],darkorchid:[153,50,204],darkred:[139,0,0],darksalmon:[233,150,122],darkseagreen:[143,188,143],darkslateblue:[72,61,139],darkslategray:[47,79,79],darkslategrey:[47,79,79],darkturquoise:[0,206,209],darkviolet:[148,0,211],deeppink:[255,20,147],deepskyblue:[0,191,255],dimgray:[105,105,105],dimgrey:[105,105,105],dodgerblue:[30,144,255],firebrick:[178,34,34],floralwhite:[255,250,240],forestgreen:[34,139,34],fuchsia:[255,0,255],gainsboro:[220,220,220],ghostwhite:[248,248,255],gold:[255,215,0],goldenrod:[218,165,32],gray:[128,128,128],green:[0,128,0],greenyellow:[173,255,47],grey:[128,128,128],honeydew:[240,255,240],hotpink:[255,105,180],indianred:[205,92,92],indigo:[75,0,130],ivory:[255,255,240],khaki:[240,230,140],lavender:[230,230,250],lavenderblush:[255,240,245],lawngreen:[124,252,0],lemonchiffon:[255,250,205],lightblue:[173,216,230],lightcoral:[240,128,128],lightcyan:[224,255,255],lightgoldenrodyellow:[250,250,210],lightgray:[211,211,211],lightgreen:[144,238,144],lightgrey:[211,211,211],lightpink:[255,182,193],lightsalmon:[255,160,122],lightseagreen:[32,178,170],lightskyblue:[135,206,250],lightslategray:[119,136,153],lightslategrey:[119,136,153],lightsteelblue:[176,196,222],lightyellow:[255,255,224],lime:[0,255,0],limegreen:[50,205,50],linen:[250,240,230],magenta:[255,0,255],maroon:[128,0,0],mediumaquamarine:[102,205,170],mediumblue:[0,0,205],mediumorchid:[186,85,211],mediumpurple:[147,112,219],mediumseagreen:[60,179,113],mediumslateblue:[123,104,238],mediumspringgreen:[0,250,154],mediumturquoise:[72,209,204],mediumvioletred:[199,21,133],midnightblue:[25,25,112],mintcream:[245,255,250],mistyrose:[255,228,225],moccasin:[255,228,181],navajowhite:[255,222,173],navy:[0,0,128],oldlace:[253,245,230],olive:[128,128,0],olivedrab:[107,142,35],orange:[255,165,0],orangered:[255,69,0],orchid:[218,112,214],palegoldenrod:[238,232,170],palegreen:[152,251,152],paleturquoise:[175,238,238],palevioletred:[219,112,147],papayawhip:[255,239,213],peachpuff:[255,218,185],peru:[205,133,63],pink:[255,192,203],plum:[221,160,221],powderblue:[176,224,230],purple:[128,0,128],rebeccapurple:[102,51,153],red:[255,0,0],rosybrown:[188,143,143],royalblue:[65,105,225],saddlebrown:[139,69,19],salmon:[250,128,114],sandybrown:[244,164,96],seagreen:[46,139,87],seashell:[255,245,238],sienna:[160,82,45],silver:[192,192,192],skyblue:[135,206,235],slateblue:[106,90,205],slategray:[112,128,144],slategrey:[112,128,144],snow:[255,250,250],springgreen:[0,255,127],steelblue:[70,130,180],tan:[210,180,140],teal:[0,128,128],thistle:[216,191,216],tomato:[255,99,71],turquoise:[64,224,208],violet:[238,130,238],wheat:[245,222,179],white:[255,255,255],whitesmoke:[245,245,245],yellow:[255,255,0],yellowgreen:[154,205,50]}},"./node_modules/color-string/index.js":function(e,t,r){var n=r("./node_modules/color-name/index.js"),o=r("./node_modules/simple-swizzle/index.js"),a={};for(var i in n)n.hasOwnProperty(i)&&(a[n[i]]=i);var s=e.exports={to:{},get:{}};function l(e,t,r){return Math.min(Math.max(t,e),r)}function u(e){var t=e.toString(16).toUpperCase();return t.length<2?"0"+t:t}s.get=function(e){var t,r;switch(e.substring(0,3).toLowerCase()){case"hsl":t=s.get.hsl(e),r="hsl";break;case"hwb":t=s.get.hwb(e),r="hwb";break;default:t=s.get.rgb(e),r="rgb"}return t?{model:r,value:t}:null},s.get.rgb=function(e){if(!e)return null;var t,r,o,a=[0,0,0,1];if(t=e.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)){for(o=t[2],t=t[1],r=0;r<3;r++){var i=2*r;a[r]=parseInt(t.slice(i,i+2),16)}o&&(a[3]=Math.round(parseInt(o,16)/255*100)/100)}else if(t=e.match(/^#([a-f0-9]{3,4})$/i)){for(o=(t=t[1])[3],r=0;r<3;r++)a[r]=parseInt(t[r]+t[r],16);o&&(a[3]=Math.round(parseInt(o+o,16)/255*100)/100)}else if(t=e.match(/^rgba?\(\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/)){for(r=0;r<3;r++)a[r]=parseInt(t[r+1],0);t[4]&&(a[3]=parseFloat(t[4]))}else{if(!(t=e.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/)))return(t=e.match(/(\D+)/))?"transparent"===t[1]?[0,0,0,0]:(a=n[t[1]])?(a[3]=1,a):null:null;for(r=0;r<3;r++)a[r]=Math.round(2.55*parseFloat(t[r+1]));t[4]&&(a[3]=parseFloat(t[4]))}for(r=0;r<3;r++)a[r]=l(a[r],0,255);return a[3]=l(a[3],0,1),a},s.get.hsl=function(e){if(!e)return null;var t=e.match(/^hsla?\(\s*([+-]?(?:\d*\.)?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/);if(t){var r=parseFloat(t[4]);return[(parseFloat(t[1])+360)%360,l(parseFloat(t[2]),0,100),l(parseFloat(t[3]),0,100),l(isNaN(r)?1:r,0,1)]}return null},s.get.hwb=function(e){if(!e)return null;var t=e.match(/^hwb\(\s*([+-]?\d*[\.]?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/);if(t){var r=parseFloat(t[4]);return[(parseFloat(t[1])%360+360)%360,l(parseFloat(t[2]),0,100),l(parseFloat(t[3]),0,100),l(isNaN(r)?1:r,0,1)]}return null},s.to.hex=function(){var e=o(arguments);return"#"+u(e[0])+u(e[1])+u(e[2])+(e[3]<1?u(Math.round(255*e[3])):"")},s.to.rgb=function(){var e=o(arguments);return e.length<4||1===e[3]?"rgb("+Math.round(e[0])+", "+Math.round(e[1])+", "+Math.round(e[2])+")":"rgba("+Math.round(e[0])+", "+Math.round(e[1])+", "+Math.round(e[2])+", "+e[3]+")"},s.to.rgb.percent=function(){var e=o(arguments),t=Math.round(e[0]/255*100),r=Math.round(e[1]/255*100),n=Math.round(e[2]/255*100);return e.length<4||1===e[3]?"rgb("+t+"%, "+r+"%, "+n+"%)":"rgba("+t+"%, "+r+"%, "+n+"%, "+e[3]+")"},s.to.hsl=function(){var e=o(arguments);return e.length<4||1===e[3]?"hsl("+e[0]+", "+e[1]+"%, "+e[2]+"%)":"hsla("+e[0]+", "+e[1]+"%, "+e[2]+"%, "+e[3]+")"},s.to.hwb=function(){var e=o(arguments),t="";return e.length>=4&&1!==e[3]&&(t=", "+e[3]),"hwb("+e[0]+", "+e[1]+"%, "+e[2]+"%"+t+")"},s.to.keyword=function(e){return a[e.slice(0,3)]}},"./node_modules/color/index.js":function(e,t,r){"use strict";var n=r("./node_modules/color-string/index.js"),o=r("./node_modules/color-convert/index.js"),a=[].slice,i=["keyword","gray","hex"],s={};Object.keys(o).forEach(function(e){s[a.call(o[e].labels).sort().join("")]=e});var l={};function u(e,t){if(!(this instanceof u))return new u(e,t);if(t&&t in i&&(t=null),t&&!(t in o))throw new Error("Unknown model: "+t);var r,c;if(null==e)this.model="rgb",this.color=[0,0,0],this.valpha=1;else if(e instanceof u)this.model=e.model,this.color=e.color.slice(),this.valpha=e.valpha;else if("string"==typeof e){var h=n.get(e);if(null===h)throw new Error("Unable to parse color from string: "+e);this.model=h.model,c=o[this.model].channels,this.color=h.value.slice(0,c),this.valpha="number"==typeof h.value[c]?h.value[c]:1}else if(e.length){this.model=t||"rgb",c=o[this.model].channels;var d=a.call(e,0,c);this.color=f(d,c),this.valpha="number"==typeof e[c]?e[c]:1}else if("number"==typeof e)e&=16777215,this.model="rgb",this.color=[e>>16&255,e>>8&255,255&e],this.valpha=1;else{this.valpha=1;var g=Object.keys(e);"alpha"in e&&(g.splice(g.indexOf("alpha"),1),this.valpha="number"==typeof e.alpha?e.alpha:0);var b=g.sort().join("");if(!(b in s))throw new Error("Unable to parse color from object: "+JSON.stringify(e));this.model=s[b];var m=o[this.model].labels,p=[];for(r=0;r<m.length;r++)p.push(e[m[r]]);this.color=f(p)}if(l[this.model])for(c=o[this.model].channels,r=0;r<c;r++){var y=l[this.model][r];y&&(this.color[r]=y(this.color[r]))}this.valpha=Math.max(0,Math.min(1,this.valpha)),Object.freeze&&Object.freeze(this)}function c(e,t,r){return(e=Array.isArray(e)?e:[e]).forEach(function(e){(l[e]||(l[e]=[]))[t]=r}),e=e[0],function(n){var o;return arguments.length?(r&&(n=r(n)),(o=this[e]()).color[t]=n,o):(o=this[e]().color[t],r&&(o=r(o)),o)}}function h(e){return function(t){return Math.max(0,Math.min(e,t))}}function d(e){return Array.isArray(e)?e:[e]}function f(e,t){for(var r=0;r<t;r++)"number"!=typeof e[r]&&(e[r]=0);return e}u.prototype={toString:function(){return this.string()},toJSON:function(){return this[this.model]()},string:function(e){var t=this.model in n.to?this:this.rgb(),r=1===(t=t.round("number"==typeof e?e:1)).valpha?t.color:t.color.concat(this.valpha);return n.to[t.model](r)},percentString:function(e){var t=this.rgb().round("number"==typeof e?e:1),r=1===t.valpha?t.color:t.color.concat(this.valpha);return n.to.rgb.percent(r)},array:function(){return 1===this.valpha?this.color.slice():this.color.concat(this.valpha)},object:function(){for(var e={},t=o[this.model].channels,r=o[this.model].labels,n=0;n<t;n++)e[r[n]]=this.color[n];return 1!==this.valpha&&(e.alpha=this.valpha),e},unitArray:function(){var e=this.rgb().color;return e[0]/=255,e[1]/=255,e[2]/=255,1!==this.valpha&&e.push(this.valpha),e},unitObject:function(){var e=this.rgb().object();return e.r/=255,e.g/=255,e.b/=255,1!==this.valpha&&(e.alpha=this.valpha),e},round:function(e){return e=Math.max(e||0,0),new u(this.color.map(function(e){return function(t){return function(e,t){return Number(e.toFixed(t))}(t,e)}}(e)).concat(this.valpha),this.model)},alpha:function(e){return arguments.length?new u(this.color.concat(Math.max(0,Math.min(1,e))),this.model):this.valpha},red:c("rgb",0,h(255)),green:c("rgb",1,h(255)),blue:c("rgb",2,h(255)),hue:c(["hsl","hsv","hsl","hwb","hcg"],0,function(e){return(e%360+360)%360}),saturationl:c("hsl",1,h(100)),lightness:c("hsl",2,h(100)),saturationv:c("hsv",1,h(100)),value:c("hsv",2,h(100)),chroma:c("hcg",1,h(100)),gray:c("hcg",2,h(100)),white:c("hwb",1,h(100)),wblack:c("hwb",2,h(100)),cyan:c("cmyk",0,h(100)),magenta:c("cmyk",1,h(100)),yellow:c("cmyk",2,h(100)),black:c("cmyk",3,h(100)),x:c("xyz",0,h(100)),y:c("xyz",1,h(100)),z:c("xyz",2,h(100)),l:c("lab",0,h(100)),a:c("lab",1),b:c("lab",2),keyword:function(e){return arguments.length?new u(e):o[this.model].keyword(this.color)},hex:function(e){return arguments.length?new u(e):n.to.hex(this.rgb().round().color)},rgbNumber:function(){var e=this.rgb().color;return(255&e[0])<<16|(255&e[1])<<8|255&e[2]},luminosity:function(){for(var e=this.rgb().color,t=[],r=0;r<e.length;r++){var n=e[r]/255;t[r]=n<=.03928?n/12.92:Math.pow((n+.055)/1.055,2.4)}return.2126*t[0]+.7152*t[1]+.0722*t[2]},contrast:function(e){var t=this.luminosity(),r=e.luminosity();return t>r?(t+.05)/(r+.05):(r+.05)/(t+.05)},level:function(e){var t=this.contrast(e);return t>=7.1?"AAA":t>=4.5?"AA":""},isDark:function(){var e=this.rgb().color;return(299*e[0]+587*e[1]+114*e[2])/1e3<128},isLight:function(){return!this.isDark()},negate:function(){for(var e=this.rgb(),t=0;t<3;t++)e.color[t]=255-e.color[t];return e},lighten:function(e){var t=this.hsl();return t.color[2]+=t.color[2]*e,t},darken:function(e){var t=this.hsl();return t.color[2]-=t.color[2]*e,t},saturate:function(e){var t=this.hsl();return t.color[1]+=t.color[1]*e,t},desaturate:function(e){var t=this.hsl();return t.color[1]-=t.color[1]*e,t},whiten:function(e){var t=this.hwb();return t.color[1]+=t.color[1]*e,t},blacken:function(e){var t=this.hwb();return t.color[2]+=t.color[2]*e,t},grayscale:function(){var e=this.rgb().color,t=.3*e[0]+.59*e[1]+.11*e[2];return u.rgb(t,t,t)},fade:function(e){return this.alpha(this.valpha-this.valpha*e)},opaquer:function(e){return this.alpha(this.valpha+this.valpha*e)},rotate:function(e){var t=this.hsl(),r=t.color[0];return r=(r=(r+e)%360)<0?360+r:r,t.color[0]=r,t},mix:function(e,t){if(!e||!e.rgb)throw new Error('Argument to "mix" was not a Color instance, but rather an instance of '+typeof e);var r=e.rgb(),n=this.rgb(),o=void 0===t?.5:t,a=2*o-1,i=r.alpha()-n.alpha(),s=((a*i==-1?a:(a+i)/(1+a*i))+1)/2,l=1-s;return u.rgb(s*r.red()+l*n.red(),s*r.green()+l*n.green(),s*r.blue()+l*n.blue(),r.alpha()*o+n.alpha()*(1-o))}},Object.keys(o).forEach(function(e){if(-1===i.indexOf(e)){var t=o[e].channels;u.prototype[e]=function(){if(this.model===e)return new u(this);if(arguments.length)return new u(arguments,e);var r="number"==typeof arguments[t]?t:this.valpha;return new u(d(o[this.model][e].raw(this.color)).concat(r),e)},u[e]=function(r){return"number"==typeof r&&(r=f(a.call(arguments),t)),new u(r,e)}}}),e.exports=u},"./node_modules/is-arrayish/index.js":function(e,t){e.exports=function(e){return!(!e||"string"==typeof e)&&(e instanceof Array||Array.isArray(e)||e.length>=0&&(e.splice instanceof Function||Object.getOwnPropertyDescriptor(e,e.length-1)&&"String"!==e.constructor.name))}},"./node_modules/simple-swizzle/index.js":function(e,t,r){"use strict";var n=r("./node_modules/is-arrayish/index.js"),o=Array.prototype.concat,a=Array.prototype.slice,i=e.exports=function(e){for(var t=[],r=0,i=e.length;r<i;r++){var s=e[r];n(s)?t=o.call(t,a.call(s)):t.push(s)}return t};i.wrap=function(e){return function(){return e(i(arguments))}}},"./src/darkmode.js":function(e,t,r){"use strict";r.r(t),r.d(t,"run",function(){return v}),r.d(t,"init",function(){return _}),r.d(t,"convertBg",function(){return k});var n=r("./src/modules/constant.js"),o=r("./src/modules/textNodeQueue.js"),a=r("./src/modules/bgNodeStack.js"),i=r("./src/modules/cssUtils.js"),s=r("./src/modules/domUtils.js"),l=r("./src/modules/sdk.js"),u=new RegExp("".concat(n.CLASS_PREFIX,"[^ ]+"),"g"),c={hasInit:!1,begin:null,error:null,mode:"",whitelist:{tagName:["MPCPS","IFRAME"]},needJudgeFirstPage:!0,delayBgJudge:!1,container:null,cssSelectorsPrefix:"",defaultLightTextColor:n.DEFAULT_LIGHT_TEXTCOLOR,defaultLightBgColor:n.DEFAULT_LIGHT_BGCOLOR,defaultDarkTextColor:n.DEFAULT_DARK_TEXTCOLOR,defaultDarkBgColor:n.DEFAULT_DARK_BGCOLOR},h=function(e,t,r){var n=t[r];switch(e){case"boolean":"boolean"==typeof n&&(c[r]=n);break;case"string":"string"==typeof n&&""!==n&&(c[r]=n);break;case"function":"function"==typeof n&&(c[r]=n);break;case"dom":n instanceof HTMLElement&&(c[r]=n)}},d=new o.default(c,"".concat(n.CLASS_PREFIX,"text__")),f=new a.default(c,"".concat(n.CLASS_PREFIX,"bg__")),g=new i.default(c),b=new s.DomUtils(c),m=new l.default({config:c,tnQueue:d,bgStack:f,cssUtils:g}),p=null,y=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{type:"dom"};if(e&&e.matches?document.documentElement.classList.add(n.HTML_CLASS):document.documentElement.classList.remove(n.HTML_CLASS),t.force&&(g.isFinish=!1),!g.isFinish)try{(c.mode?"dark"===c.mode:e.matches)?("dom"===t.type?("function"==typeof c.begin&&c.begin(b.hasDelay()),Array.prototype.forEach.call(b.get(),function(e){if(e.className&&"string"==typeof e.className&&(e.className=e.className.replace(u,"")),c.needJudgeFirstPage){var t=e.getBoundingClientRect(),r=t.top,o=t.bottom;r<=0&&o<=0?g.addCss(m.convert(e),!1):r>0&&r<n.PAGE_HEIGHT||o>0&&o<n.PAGE_HEIGHT?(b.addFirstPageNode(e),g.addCss(m.convert(e),!0)):(c.needJudgeFirstPage=!1,g.writeStyle(!0),b.showFirstPageNodes(),g.addCss(m.convert(e),!1))}else g.addCss(m.convert(e),!1)})):"bg"===t.type&&d.forEach(function(e){return f.contains(e,function(e){g.addCss(g.genCss(e.className,e.cssKV),!1)})}),g.writeStyle()):(c.needJudgeFirstPage=!1,c.delayBgJudge=!1,null===c.container&&"dom"===t.type&&b.len()&&b.delay(),document.documentElement.classList.remove(n.HTML_CLASS))}catch(e){console.error(e),"function"==typeof c.error&&c.error(e)}};function v(e,t){_(t),b.set(e),y(p,{force:!0,type:"dom"})}function _(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(!c.hasInit){c.hasInit=!0;var t=c.whitelist.tagName;if(e.whitelist&&e.whitelist.tagName instanceof Array&&e.whitelist.tagName.forEach(function(e){e=e.toUpperCase(),-1===t.indexOf(e)&&t.push(e)}),["dark","light"].indexOf(e.mode)>-1&&(h("string",e,"mode"),document.getElementsByTagName("html")[0].classList.add(n.HTML_CLASS)),h("function",e,"begin"),h("function",e,"error"),h("boolean",e,"needJudgeFirstPage"),h("boolean",e,"delayBgJudge"),h("dom",e,"container"),h("string",e,"cssSelectorsPrefix"),h("string",e,"defaultLightTextColor"),h("string",e,"defaultLightBgColor"),h("string",e,"defaultDarkTextColor"),h("string",e,"defaultDarkBgColor"),!c.mode&&null===p)if(n.isWxWork&&n.isAndroid)console.log("andorid wxwork"),window.navigator.userAgent.indexOf("ColorScheme/Dark")>-1&&(document.documentElement.classList.add(n.HTML_CLASS),p={matches:!0});else window.matchMedia&&(console.log("ua macth"),(p=window.matchMedia(n.MEDIA_QUERY)).addListener(y))}}function k(e){b.set(e),null!==c.container&&(f.update(e),d.update(e)),y(p,{force:!0,type:"bg"})}},"./src/modules/bgNodeStack.js":function(e,t,r){"use strict";function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function o(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}r.r(t),r.d(t,"default",function(){return a});var a=function(){function e(t,r){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),o(this,"_stack",[]),o(this,"_idx",0),this._config=t,this._prefix=r}var t,r,a;return t=e,(r=[{key:"push",value:function(e,t){var r="".concat(this._prefix).concat(this._idx++);e.classList.add(r),this._stack.unshift({el:e,className:r,cssKV:t,updated:!this._config.delayBgJudge})}},{key:"contains",value:function(e,t){var r=e.getBoundingClientRect(),n=[];for(this._stack.forEach(function(e,t){if(e.updated){e.rect||(e.rect=e.el.getBoundingClientRect());var o=e.rect;r.top>=o.bottom||r.bottom<=o.top||r.left>=o.right||r.right<=o.left||n.unshift(t)}});n.length;){var o=this._stack.splice(n.shift(),1)[0];"function"==typeof t&&t(o)}}},{key:"update",value:function(e){this._stack.forEach(function(t){t.updated||Array.prototype.some.call(e,function(e){return!(1!==e.nodeType||!e.classList.contains(t.className)||(t.el=e,t.updated=!0,0))})})}}])&&n(t.prototype,r),a&&n(t,a),e}()},"./src/modules/constant.js":function(e,t,r){"use strict";r.r(t),r.d(t,"MEDIA_QUERY",function(){return n}),r.d(t,"CLASS_PREFIX",function(){return o}),r.d(t,"HTML_CLASS",function(){return a}),r.d(t,"COLORATTR",function(){return s}),r.d(t,"BGCOLORATTR",function(){return l}),r.d(t,"ORIGINAL_COLORATTR",function(){return u}),r.d(t,"ORIGINAL_BGCOLORATTR",function(){return c}),r.d(t,"BGIMAGEATTR",function(){return h}),r.d(t,"DEFAULT_LIGHT_TEXTCOLOR",function(){return d}),r.d(t,"DEFAULT_LIGHT_BGCOLOR",function(){return f}),r.d(t,"DEFAULT_DARK_TEXTCOLOR",function(){return g}),r.d(t,"DEFAULT_DARK_BGCOLOR",function(){return b}),r.d(t,"GRAY_MASK_COLOR",function(){return m}),r.d(t,"WHITE_LIKE_COLOR_BRIGHTNESS",function(){return p}),r.d(t,"MAX_LIMIT_BGCOLOR_BRIGHTNESS",function(){return y}),r.d(t,"MIN_LIMIT_OFFSET_BRIGHTNESS",function(){return v}),r.d(t,"HIGH_BGCOLOR_BRIGHTNESS",function(){return _}),r.d(t,"HIGH_BLACKWHITE_HSL_BRIGHTNESS",function(){return k}),r.d(t,"LOW_BLACKWHITE_HSL_BRIGHTNESS",function(){return w}),r.d(t,"PAGE_HEIGHT",function(){return T}),r.d(t,"TABLE_NAME",function(){return x}),r.d(t,"IS_PC",function(){return S}),r.d(t,"isIOS",function(){return O}),r.d(t,"isAndroid",function(){return M}),r.d(t,"isWxWork",function(){return C}),r.d(t,"IMPORTANT_REGEXP",function(){return L});var n="(prefers-color-scheme: dark)",o="js_darkmode__",a="__dark_theme",i="".concat(1*new Date).concat(Math.round(10*Math.random())),s="data-darkmode-color-".concat(i),l="data-darkmode-bgcolor-".concat(i),u="data-darkmode-original-color-".concat(i),c="data-darkmode-original-bgcolor-".concat(i),h="data-darkmode-bgimage-".concat(i),d="#191919",f="#fff",g="rgba(248, 251, 253, .68)",b="#000",m="rgba(0,0,0,0.1)",p=250,y=190,v=65,_=100,k=40,w=22,T=window.getInnerHeight&&window.getInnerHeight()||window.innerHeight||document.documentElement.clientHeight,x=["TABLE","TR","TD","TH"],A=navigator.userAgent,S=/windows\snt/i.test(A)&&!/Windows\sPhone/i.test(A)||/mac\sos/i.test(A)&&!/(iPhone|iPad|iPod|iOS)/i.test(A),O=/(iPhone|iPod|iPad)/i.test(window.navigator.platform),M=-1!==A.toLowerCase().indexOf("android"),C=-1!==A.toLowerCase().indexOf("wxwork"),L=/ !important$/},"./src/modules/cssUtils.js":function(e,t,r){"use strict";r.r(t),r.d(t,"default",function(){return i});var n=r("./src/modules/constant.js");function o(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function a(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}var i=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),a(this,"_firstPageStyle",""),a(this,"_otherPageStyle",""),a(this,"isFinish",!1),this._config=t}var t,r,i;return t=e,(r=[{key:"genCssKV",value:function(e,t){return"".concat(e,": ").concat(t," !important;")}},{key:"genCss",value:function(e,t){return"".concat("dark"===this._config.mode?"html.".concat(n.HTML_CLASS," "):"").concat(this._config.cssSelectorsPrefix&&"".concat(this._config.cssSelectorsPrefix," "),".").concat(e,"{").concat(t,"}")}},{key:"addCss",value:function(e,t){this[t?"_firstPageStyle":"_otherPageStyle"]+=e}},{key:"writeStyle",value:function(e){var t="";e?t="_firstPageStyle":(this._otherPageStyle=this._firstPageStyle+this._otherPageStyle,this._firstPageStyle="",t="_otherPageStyle",this.isFinish=!0);var r=this[t];r&&(document.head.insertAdjacentHTML("beforeend",'<style type="text/css">'.concat("dark"===this._config.mode?r:"".concat(r),"</style>")),this[t]="")}}])&&o(t.prototype,r),i&&o(t,i),e}()},"./src/modules/domUtils.js":function(e,t,r){"use strict";function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function o(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function a(e){return function(e){if(Array.isArray(e))return i(e)}(e)||function(e){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}(e)||function(e,t){if(!e)return;if("string"==typeof e)return i(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);"Object"===r&&e.constructor&&(r=e.constructor.name);if("Map"===r||"Set"===r)return Array.from(r);if("Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))return i(e,t)}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function i(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}function s(e){var t;return(t=[e]).concat.apply(t,a(e.querySelectorAll("*")))}function l(e){var t="";return Array.prototype.forEach.call(e.childNodes,function(e){3===e.nodeType&&(t+=e.nodeValue.replace(/\s/g,""))}),t.length>0}r.r(t),r.d(t,"getChildrenAndIt",function(){return s}),r.d(t,"hasTextNode",function(){return l}),r.d(t,"hasTableClass",function(){return c}),r.d(t,"DomUtils",function(){return h});var u={"ue-table-interlace-color-single":"#fcfcfc","ue-table-interlace-color-double":"#f7faff"};function c(e){var t=null;return Array.prototype.some.call(e.classList,function(e){return!!u[e]&&(t=u[e],!0)}),t}var h=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),o(this,"_nodes",[]),o(this,"_firstPageNodes",[]),o(this,"_delayNodes",[]),this._config=t}var t,r,a;return t=e,(r=[{key:"set",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[];this._nodes=e}},{key:"len",value:function(){return this._nodes.length}},{key:"get",value:function(){var e=[];return this._nodes.length?(e=this._nodes,this._nodes=[]):this._delayNodes.length?(e=this._delayNodes,this._delayNodes=[]):this._config.container&&(e=this._config.container.querySelectorAll("*")),e}},{key:"delay",value:function(){var e=this;Array.prototype.forEach.call(this._nodes,function(t){return e._delayNodes.push(t)}),this._nodes=[]}},{key:"hasDelay",value:function(){return this._delayNodes.length>0}},{key:"addFirstPageNode",value:function(e){this._firstPageNodes.push(e)}},{key:"showFirstPageNodes",value:function(){this._firstPageNodes.forEach(function(e){return e.style.visibility="visible"}),this._firstPageNodes=[]}}])&&n(t.prototype,r),a&&n(t,a),e}()},"./src/modules/sdk.js":function(e,t,r){"use strict";r.r(t),r.d(t,"default",function(){return w});var n=r("./node_modules/color/index.js"),o=r.n(n),a=r("./node_modules/color-name/index.js"),i=r.n(a),s=r("./src/modules/constant.js"),l=r("./src/modules/domUtils.js");function u(e,t){return function(e){if(Array.isArray(e))return e}(e)||function(e,t){if("undefined"==typeof Symbol||!(Symbol.iterator in Object(e)))return;var r=[],n=!0,o=!1,a=void 0;try{for(var i,s=e[Symbol.iterator]();!(n=(i=s.next()).done)&&(r.push(i.value),!t||r.length!==t);n=!0);}catch(e){o=!0,a=e}finally{try{n||null==s.return||s.return()}finally{if(o)throw a}}return r}(e,t)||h(e,t)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function c(e){return function(e){if(Array.isArray(e))return d(e)}(e)||function(e){if("undefined"!=typeof Symbol&&Symbol.iterator in Object(e))return Array.from(e)}(e)||h(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function h(e,t){if(e){if("string"==typeof e)return d(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(r):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?d(e,t):void 0}}function d(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}function f(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}i.a.windowtext=[0,0,0],i.a.transparent=[255,255,255,0];var g=new RegExp(Object.keys(i.a).map(function(e){return"\\b".concat(e,"\\b")}).join("|"),"ig"),b=/\brgba?\([^)]+\)/i,m=/\brgba?\([^)]+\)/gi,p=function(e){return e.replace(s.IMPORTANT_REGEXP,"")},y=function(e,t){return p(e).replace(g,function(e){if(!t&&"transparent"===e)return e;var r=i.a[e.toLowerCase()];return"".concat(r.length>3?"rgba":"rgb","(").concat(r.toString(),")")})},v=function(e){if(!e||e.length<1)return"";if(1===e.length)return e[0];for(var t=e.shift(),r=e.shift();r;){var n=o()(r);t=o()(t).mix(n,n.alpha()),r=e.shift()}return t},_=function(e){var t=y(e);return b.test(t)?t:""},k=function(e){return(299*e[0]+587*e[1]+114*e[2])/1e3},w=function(){function e(t){var r,n,a,i=t.config,s=t.tnQueue,l=t.bgStack,u=t.cssUtils;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),a=0,(n="_idx")in(r=this)?Object.defineProperty(r,n,{value:a,enumerable:!0,configurable:!0,writable:!0}):r[n]=a,this._config=i,this._tnQueue=s,this._bgStack=l,this._cssUtils=u,this._defaultDarkTextColorRgb=o()(this._config.defaultDarkTextColor).rgb().array(),this._defaultDarkBgColorRgb=o()(this._config.defaultDarkBgColor).rgb().array(),this._defaultDarkBgColorHSL=o()(this._config.defaultDarkBgColor).hsl().array(),this._defaultDarkTextColorBrightness=k(this._defaultDarkTextColorRgb),this._defaultDarkBgColorBrightness=k(this._defaultDarkBgColorRgb),this._defaultDarkBgColorHslBrightness=this._defaultDarkBgColorHSL[2],this._maxLimitOffsetBrightness=this._defaultDarkTextColorBrightness-this._defaultDarkBgColorBrightness}var t,r,n;return t=e,(r=[{key:"_adjustBrightnessByLimit",value:function(e,t){var r=e/k(t),n=Math.min(255,t[0]*r),a=Math.min(255,t[1]*r),i=Math.min(255,t[2]*r);return 0===a||255===n||255===i?a=(1e3*e-299*n-114*i)/587:0===n?n=(1e3*e-587*a-114*i)/299:0!==i&&255!==a||(i=(1e3*e-299*n-587*a)/114),o.a.rgb(n,a,i)}},{key:"_adjustTextBrightness",value:function(e,t){var r=t.rgb().array(),n=t.alpha(),a=k(r)*n+this._defaultDarkBgColorBrightness*(1-n),i=e.rgb().array(),l=e.hsl().array(),u=e.alpha(),h=k(i),d=Math.abs(a-h);if(h>=s.WHITE_LIKE_COLOR_BRIGHTNESS)return e;if(d>this._maxLimitOffsetBrightness&&a<=this._defaultDarkBgColorBrightness+2)return this._adjustBrightnessByLimit(this._maxLimitOffsetBrightness+a,i).alpha(u);if(d>=s.MIN_LIMIT_OFFSET_BRIGHTNESS)return e;if(a>=s.HIGH_BGCOLOR_BRIGHTNESS){if(l[2]>90-s.HIGH_BLACKWHITE_HSL_BRIGHTNESS){l[2]=90-l[2];var f=o.a.hsl.apply(o.a,c(l)).alpha(u);return this._adjustTextBrightness(f,t)}return this._adjustBrightnessByLimit(Math.min(this._maxLimitOffsetBrightness,a-s.MIN_LIMIT_OFFSET_BRIGHTNESS),i).alpha(u)}if(l[2]<=s.HIGH_BLACKWHITE_HSL_BRIGHTNESS){l[2]=90-l[2];var g=o.a.hsl.apply(o.a,c(l)).alpha(u);return this._adjustTextBrightness(g,t)}return this._adjustBrightnessByLimit(Math.min(this._maxLimitOffsetBrightness,a+s.MIN_LIMIT_OFFSET_BRIGHTNESS),i).alpha(u)}},{key:"_adjustBackgroundBrightness",value:function(e){var t=e.rgb().array(),r=e.hsl().array(),n=e.alpha(),a=k(t),i=e;return 0===r[1]&&r[2]>s.HIGH_BLACKWHITE_HSL_BRIGHTNESS||a>s.WHITE_LIKE_COLOR_BRIGHTNESS?i=o.a.hsl(0,0,Math.min(100,100+this._defaultDarkBgColorHslBrightness-r[2])):a>s.MAX_LIMIT_BGCOLOR_BRIGHTNESS?i=this._adjustBrightnessByLimit(s.MAX_LIMIT_BGCOLOR_BRIGHTNESS,t).alpha(n):r[2]<s.LOW_BLACKWHITE_HSL_BRIGHTNESS&&(r[2]=s.LOW_BLACKWHITE_HSL_BRIGHTNESS,i=o.a.hsl.apply(o.a,c(r))),i.alpha(n).rgb()}},{key:"_adjustBrightness",value:function(e,t,r){var n,a=e.alpha(),i="";if(r.isBgColor){if(t.getAttribute(s.BGIMAGEATTR)&&a>=.05&&t.removeAttribute(s.BGIMAGEATTR),n=this._adjustBackgroundBrightness(e),!r.hasInlineColor){var l=t.getAttribute(s.COLORATTR)||this._config.defaultLightTextColor,u=n||e,c=this._adjustBrightness(o()(l),t,{isTextColor:!0,parentElementBgColorStr:u});c.newColor?i+=this._cssUtils.genCssKV("color",c.newColor):i+=this._cssUtils.genCssKV("color",l)}}else if(r.isTextColor||r.isBorderColor){var h=r.parentElementBgColorStr||r.isTextColor&&t.getAttribute(s.BGCOLORATTR)||this._config.defaultDarkBgColor,d=o()(h);t.getAttribute(s.BGIMAGEATTR)||(n=this._adjustTextBrightness(e,d))}else r.isTextShadow&&(n=this._adjustBackgroundBrightness(e));return{newColor:n&&e.toString()!==n.toString()&&n.alpha(a).rgb(),extStyle:i}}},{key:"convert",value:function(e){var t=this,r=e.nodeName;if(this._config.whitelist.tagName.indexOf(r)>-1)return"";var n,a,i=e.style,c="",h="",d=!1,f=!1,g=!1,k=(i.cssText&&i.cssText.split(";")||[]).map(function(e){var t=e.indexOf(":");return[e.slice(0,t).toLowerCase(),e.slice(t+1)].map(function(e){return(e||"").replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,"")})}).filter(function(e){var t=u(e,2),r=t[0],o=t[1];return"color"===r?d=!0:/background/i.test(r)&&(f=!0,"background-position"===r?n=o:"background-size"===r&&(a=o)),(/background/i.test(r)||/^(-webkit-)?border-image/.test(r))&&/url\([^)]*\)/i.test(o)&&(g=!0),["-webkit-border-image","border-image","color","background-color","background-image","background","border","border-top","border-right","border-bottom","border-left","border-color","border-top-color","border-right-color","border-bottom-color","border-left-color","-webkit-text-fill-color","-webkit-text-stroke","-webkit-text-stroke-color","text-shadow"].indexOf(r)>-1}).sort(function(e,t){var r=u(e,1)[0],n=u(t,1)[0];return"color"===r?1:"background-image"===r&&"background-color"===n?1:0===n.indexOf("-webkit-text")?1:-1});if(s.TABLE_NAME.indexOf(r)>-1&&!f){var w=Object(l.hasTableClass)(e);w||(w=e.getAttribute("bgcolor")),w&&(k.unshift(["background-color",o()(w).toString()]),f=!0)}if("FONT"===r&&!d){var T=e.getAttribute("color");T&&(k.push(["color",o()(T).toString()]),d=!0)}var x="",A="",S=0;if(k.some(function(e,t){var r=u(e,2),n=r[0],o=r[1];if(0!==n.indexOf("-webkit-text"))return S=t,!0;switch(n){case"-webkit-text-fill-color":x=_(o);break;case"-webkit-text-stroke":var a=o.split(" ");2===a.length&&(A=_(a[1]));break;case"-webkit-text-stroke-color":A=_(o)}return!1}),x&&(d?k[k.length-1]=["-webkit-text-fill-color",x]:(k.push(["-webkit-text-fill-color",x]),d=!0)),S&&(k.splice(0,S),A&&k.unshift(["-webkit-text-stroke-color",A])),k.forEach(function(r){var h,_=u(r,2),k=_[0],w=_[1],T=w,x=!1,A=/^background/.test(k),S="text-shadow"===k,O=["-webkit-text-stroke-color","color","-webkit-text-fill-color"].indexOf(k),M=/^border/.test(k),C=/gradient/.test(w),L=[],E="";if(w=y(w,C),b.test(w)){if(C){for(var B=m.exec(w);B;)L.push(B[0]),B=m.exec(w);h=v(L)}var I=0;w=w.replace(m,function(r){C&&(r=h,x=!0);var n=t._adjustBrightness(o()(r),e,{isBgColor:A,isTextShadow:S,isTextColor:O>-1,isBorderColor:M,hasInlineColor:d}),a=!g&&n.newColor;if(E+=n.extStyle,A||O>0){var i=A?s.BGCOLORATTR:s.COLORATTR,u=A?s.ORIGINAL_BGCOLORATTR:s.ORIGINAL_COLORATTR,c=a?a.toString():r;0===I&&Object(l.getChildrenAndIt)(e).forEach(function(e){var n=e.getAttribute(u)||t._config.defaultLightBgColor;e.setAttribute(i,c),e.setAttribute(u,n.split("|").concat(r).join("|")),A&&o()(c).alpha()>=.05&&e.getAttribute(s.BGIMAGEATTR)&&e.removeAttribute(s.BGIMAGEATTR)})}return a&&(x=!0),I+=1,a||r}).replace(/\s?!\s?important/gi,"")}if(E&&(c+=E),!(e instanceof SVGElement)){var j=/^background/.test(k),R=/^(-webkit-)?border-image/.test(k);if((j||R)&&/url\([^)]*\)/i.test(w)){x=!0;var G=v((e.getAttribute(s.ORIGINAL_BGCOLORATTR)||t._config.defaultLightBgColor).split("|"));if(w=w.replace(/^(.*?)url\(([^)]*)\)(.*)$/i,function(r){var o=r,i="",u="",h="";return"1"!==e.getAttribute(s.BGIMAGEATTR)&&Object(l.getChildrenAndIt)(e).forEach(function(e){return e.setAttribute(s.BGIMAGEATTR,"1")}),j?(o="linear-gradient(".concat(s.GRAY_MASK_COLOR,", ").concat(s.GRAY_MASK_COLOR,"),").concat(r),h=t._cssUtils.genCssKV(k,"".concat(o,",linear-gradient(").concat(G,", ").concat(G,")")),n&&(i="top left,".concat(n),c+=t._cssUtils.genCssKV("background-position","".concat(i)),h+=t._cssUtils.genCssKV("background-position","".concat(i,",top left"))),a&&(u="100%,".concat(a),c+=t._cssUtils.genCssKV("background-size","".concat(u)),h+=t._cssUtils.genCssKV("background-size","".concat(u,",100%"))),t._bgStack.push(e,h)):!f&&t._bgStack.push(e,t._cssUtils.genCssKV("background-image","linear-gradient(".concat(s.GRAY_MASK_COLOR,", ").concat(s.GRAY_MASK_COLOR,"),linear-gradient(").concat(G,", ").concat(G,")"))),o}),!d){var N=v((e.getAttribute(s.ORIGINAL_COLORATTR)||t._config.defaultLightTextColor).split("|"));c+=t._cssUtils.genCssKV("color",N),Object(l.getChildrenAndIt)(e).forEach(function(e){return e.setAttribute(s.COLORATTR,N)})}}}x&&(s.IMPORTANT_REGEXP.test(T)&&(i[k]=p(T)),C?t._bgStack.push(e,t._cssUtils.genCssKV(k,w)):c+=t._cssUtils.genCssKV(k,w))}),c){s.IS_PC&&e.setAttribute("data-style",i.cssText);var O="".concat(s.CLASS_PREFIX).concat(this._idx++);e.classList.add(O),h+=c?this._cssUtils.genCss(O,c):""}return Object(l.hasTextNode)(e)&&(this._config.delayBgJudge?this._tnQueue.push(e):this._bgStack.contains(e,function(e){h+=t._cssUtils.genCss(e.className,e.cssKV)})),h}}])&&f(t.prototype,r),n&&f(t,n),e}()},"./src/modules/textNodeQueue.js":function(e,t,r){"use strict";function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function o(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function a(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}r.r(t),r.d(t,"default",function(){return i});var i=function(){function e(t,r){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),a(this,"_queue",[]),a(this,"_idx",0),this._config=t,this._prefix=r}var t,r,i;return t=e,(r=[{key:"push",value:function(e){var t="".concat(this._prefix).concat(this._idx++);e.classList.add(t),this._queue.push({el:e,className:t,updated:!this._config.delayBgJudge})}},{key:"forEach",value:function(e){var t=[];for(this._queue.forEach(function(r,o){r.updated&&(t.unshift(o),n(e)&&e(r.el))});t.length;)this._queue.splice(t.shift(),1)}},{key:"update",value:function(e){this._queue.forEach(function(t){t.updated||Array.prototype.some.call(e,function(e){return!(1!==e.nodeType||!e.classList.contains(t.className)||(t.el=e,t.updated=!0,0))})})}}])&&o(t.prototype,r),i&&o(t,i),e}()}})}); </script><script>if(window.Darkmode) window.Darkmode.run(document.body.querySelectorAll('*'), {
+defaultDarkTextColor: '#FFF',
+defaultDarkBgColor: '#000',
+cssSelectorsPrefix: '.__dark_theme'
+});
+document.getElementById('notice_cnt').style.visibility = 'visible'</script>       <script>var readyWXjsApi = function(jsApiFun) {
+if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+jsApiFun()
+} else {
+document.attachEvent && document.attachEvent("WeixinJSBridgeReady", jsApiFun)
+document.addEventListener && document.addEventListener("WeixinJSBridgeReady", jsApiFun)
+}
+};
+readyWXjsApi (function() {
+WeixinJSBridge.invoke('hideOptionMenu');
+WeixinJSBridge.invoke('wwapp.showWebviewRightMenu', { menuKey: 'hide' });
+})</script>    </div></div></div></body></html>
