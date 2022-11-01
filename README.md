@@ -1,2 +1,2 @@
 # cfblog
-效果网站：web.jasas.eu.org
+效果网站：http://web.jasas.eu.org/
