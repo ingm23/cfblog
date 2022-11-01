@@ -21,7 +21,7 @@ const highlight_main = "http://120.25.220.132/1/highlight.min.js";
 const highlight_pack = "http://120.25.220.132/1/highlight.pack.js";
 
 // Copyright
-const copyright = `&copy; 2022 ${site_name} | <a href="https://github.com/absudra/Y2Z3b3JrZXJibG9n" target="_blank">Github</a>`;
+const copyright = `&copy; 2022 ${site_name} | <a href="https://github.com/kasuganosoras/cloudflare-worker-blog" target="_blank">Github</a>`;
 
 /* 配置到此结束 */
 
